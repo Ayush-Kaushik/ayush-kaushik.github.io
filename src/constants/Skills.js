@@ -10,12 +10,26 @@ import {
     faPython,
     faTrello,
     faSlack,
-    faReact, faDocker, faGithub, faGitlab, faLaravel
+    faReact, 
+    faDocker, 
+    faGithub, 
+    faGitlab, 
+    faLaravel
 } from "@fortawesome/free-brands-svg-icons";
 import {faTerminal} from "@fortawesome/free-solid-svg-icons";
 
 export const TECHNICAL_SKILLS = {
-    "languages": [
+    "markup_languages": [
+        {
+            "label": <FontAwesomeIcon className={"project-icon"} icon={faHtml5} size={"2x"}/>,
+            "toolTip": "HTML"
+        },
+        {
+            "label": <FontAwesomeIcon className={"project-icon"} icon={faCss3} size={"2x"}/>,
+            "toolTip": "CSS"
+        }
+    ],
+    "programming_languages": [
         {
             "label": <FontAwesomeIcon className={"project-icon"} icon={faJava} size={"2x"}/>,
             "toolTip": "Java"
@@ -27,14 +41,6 @@ export const TECHNICAL_SKILLS = {
         {
             "label": <FontAwesomeIcon className={"project-icon"} icon={faPhp} size={"2x"}/>,
             "toolTip": "PHP"
-        },
-        {
-            "label": <FontAwesomeIcon className={"project-icon"} icon={faHtml5} size={"2x"}/>,
-            "toolTip": "HTML"
-        },
-        {
-            "label": <FontAwesomeIcon className={"project-icon"} icon={faCss3} size={"2x"}/>,
-            "toolTip": "CSS"
         },
         {
             "label": <FontAwesomeIcon className={"project-icon"} icon={faPython} size={"2x"}/>,

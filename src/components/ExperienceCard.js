@@ -8,7 +8,7 @@ const ExperienceCard = ({experience}) => {
             </div>
 
             <h1>{experience.workTitle}</h1>
-            <h2>{experience.timeline}</h2>
+            <h2 className={"layout-card-subtitle"}>{experience.timeline}</h2>
 
             <div className={"experience-description"}>
                 {experience.description ?

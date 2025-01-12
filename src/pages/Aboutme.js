@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import {UserContext} from "../context/UserContext";
 import Emoji from "../components/Emoji";
-import ParticleBackground from "../components/ParticleBackground";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faGithubSquare, faLinkedin, faDev} from "@fortawesome/free-brands-svg-icons";
 import {Link} from "react-scroll";
@@ -11,16 +10,15 @@ const Aboutme = () => {
 
     return (
         <div>
-            <ParticleBackground/>
             <div
                 className={"aboutme-container"}
             >
                 <span>
                         <h1>{"Hi!"}<Emoji symbol={"👋"} label={"wave"}/>{"    I'm Ayush Kaushik"}</h1>
-                        <h2>{"I'm a Software Engineer @ OpenText"}</h2>
+                        <h2>{"I'm a Software Engineer @ OpenText."}</h2>
                         <Link to="contact" smooth={true} duration={1000}>
                             <button id={"#cta"}>
-                                <h3>{"Let's Connect"}</h3>
+                                <h3>{"Let's Connect!"}</h3>
                             </button>
                         </Link>
                         <div>

@@ -56,6 +56,7 @@
   h1 {
     text-align: left;
     color: $titleColor;
+    margin-bottom: 1%;
   }
 
   @include sm {
@@ -110,6 +111,7 @@
   .layout-card-subtitle {
     font-weight: lighter;
     color: $subTitleColor;
+    margin-top: 1%;
     margin-bottom: 2%;
   }
 }

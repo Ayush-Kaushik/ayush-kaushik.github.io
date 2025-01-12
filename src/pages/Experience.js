@@ -1,7 +1,8 @@
 import React from 'react';
-import {EXPERIENCE} from "../constants/Experience";
+import { EXPERIENCE } from "../constants/Experience";
 import ExperienceCard from "../components/ExperienceCard";
-import {Element} from "react-scroll";
+import ExperienceHackathonCard from "../components/ExperienceHackathonCard";
+import { Element } from "react-scroll";
 
 const Experience = () => {
     return (
@@ -9,9 +10,15 @@ const Experience = () => {
             <div className={"layout-page"}>
                 <h1>{"Experience"}</h1>
                 <div>{EXPERIENCE.map((item, index) => {
-                    return (
-                        <ExperienceCard key={index} experience={item}/>
-                    )
+                    if (item.type === "job") {
+                        return (
+                            <ExperienceCard key={index} experience={item.data} />
+                        )
+                    } else if (item.type === "hackathon") {
+                        return (
+                            <ExperienceHackathonCard key={index} experience={item.data} />
+                        )
+                    }
                 })}
                 </div>
             </div>

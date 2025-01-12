@@ -24,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "GENERATE_SOURCEMAP=false react-scripts build",
+    "predeploy": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "test": "react-scripts test",

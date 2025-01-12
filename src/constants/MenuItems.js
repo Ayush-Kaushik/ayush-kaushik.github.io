@@ -17,4 +17,4 @@ export default [
     }
 ];
 
-export const RESUME_LINK = "https://www.dropbox.com/s/rj0nm5tvbgjon8v/AyushKaushik_Resume2021.pdf?raw=1";
+export const RESUME_LINK = "https://www.dropbox.com/s/a8x8puftjox404y/AyushKaushikResume2023.pdf?raw=1";

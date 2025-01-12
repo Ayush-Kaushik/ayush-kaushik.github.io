@@ -13,7 +13,7 @@
       margin-top: 5%;
 
       @include sm {
-        font-size: $h1_sm - 10px;
+        font-size: $h1_sm - 5px;
       }
 
       @include md {
