@@ -7,7 +7,6 @@ import Footer from "./pages/Footer";
 import Experience from "./pages/Experience";
 import Navbar from "./components/Navbar";
 import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
 
 function App() {
 
@@ -24,7 +23,6 @@ function App() {
             <Experience/>
             <Projects/>
             <Articles/>
-            <Contact />
             <Footer/>
         </div>
     );
