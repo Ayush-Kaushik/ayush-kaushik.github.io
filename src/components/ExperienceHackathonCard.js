@@ -6,7 +6,7 @@ const ExperienceHackathonCard = ({experience}) => {
     return (
         <div className={"layout-card"}>
             <div className={"layout-card-img"}>
-                {experience.link ? <a href={experience.company.link}><img src={experience.image} alt={"experience image"}/></a> : ""}
+                {experience.link ? <a href={experience.company.link}><img src={experience.image} alt={"hackathon-experience"}/></a> : ""}
             </div>
 
             <h1>{experience.workTitle}</h1>

@@ -8,7 +8,7 @@ const ArticleCard = ({article}) => {
         <div className={"layout-card"}>
             <h1>{article.title}</h1>
             <div className={"layout-card-img"}>
-                <img src={article.social_image} alt={"article image"}/>
+                <img src={article.social_image} alt={"article"}/>
             </div>
 
             <span className={"layout-card-links"}>

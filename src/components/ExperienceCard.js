@@ -4,7 +4,7 @@ const ExperienceCard = ({experience}) => {
     return (
         <div className={"layout-card"}>
             <div className={"layout-card-img"}>
-                <a href={experience.company.link}><img src={experience.image} alt={"experience image"}/></a>
+                <a href={experience.company.link}><img src={experience.image} alt={"experience"}/></a>
             </div>
 
             <h1>{experience.workTitle}</h1>

@@ -10,15 +10,16 @@ const Experience = () => {
             <div className={"layout-page"}>
                 <h1>{"Experience"}</h1>
                 <div>{EXPERIENCE.map((item, index) => {
-                    if (item.type === "job") {
-                        return (
-                            <ExperienceCard key={index} experience={item.data} />
-                        )
-                    } else if (item.type === "hackathon") {
+
+                    if (item.type === "hackathon") {
                         return (
                             <ExperienceHackathonCard key={index} experience={item.data} />
                         )
                     }
+
+                    return (
+                        <ExperienceCard key={index} experience={item.data} />
+                    )
                 })}
                 </div>
             </div>

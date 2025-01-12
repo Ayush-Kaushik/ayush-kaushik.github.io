@@ -8,7 +8,7 @@ export const EXPERIENCE = [
                 "repository_url": "https://github.com/felicityy-li/Give-Care"
             },
             "description": [
-                "\"Give Care\" is a comprehensive tool to help caregivers manage their loved one\'s vaccines, medications, lab tests, and appointments by connecting caregivers with pharmacists to optimize their patients health outcomes."
+                "\"Give Care\" is a comprehensive tool to help caregivers manage their loved one's vaccines, medications, lab tests, and appointments by connecting caregivers with pharmacists to optimize their patients health outcomes."
             ],
             "responsibilities": [
                 "Led a team of 2 developers",
