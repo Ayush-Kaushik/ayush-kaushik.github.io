@@ -1,101 +1,65 @@
+// Base styles for the container
 .aboutme-container {
   text-align: center;
   display: flex;
-  padding: 5%;
-  z-index: 1;
+  padding: 0.5rem;
   justify-content: center;
 
-  div {
-    position: relative;
-
-    @include sm {
-      .project-icon {
-        padding: 2%;
-        font-size: 20px;
-      }
-    }
-
-    @include md {
-      .project-icon {
-        padding: 2%;
-        font-size: 40px;
-      }
-    }
-
-    @include lg {
-      .project-icon {
-        padding: 2%;
-        font-size: 45px;
-      }
-    }
-  }
-
-  span {
-    top: 0;
-    left: 0;
-  }
-
-  button {
-    margin-top: 2%;
-    text-decoration: none;
-    background-color: $buttonBackgroundColorPrimary;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    padding-right: 2%;
-    padding-left: 2%;
-  }
-
-  button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    background-color: $footerColorHover;
-    border-color: $footerColor;
-    color: $footerLinkColor;
-    cursor: pointer;
+  img {
+    border-radius: 20px;
+    width: 80%;
   }
 
   a {
     color: $iconColor;
+
+    &:hover {
+      color: $footerColor;
+    }
+
+    &:visited,
+    &:focus {
+      color: $iconColor;
+    }
   }
 
-  a:hover {
-    color: $footerColor;
+  .aboutme-img-container {
+    width: 40%; // Default style
+    align-items: center;
   }
 
-  a:visited {
-    color: $iconColor;
+  h1,
+  h2 {
+    font-size: 1.5rem; // Base size
   }
+}
 
-  a:focus {
-    color: $iconColor;
-
-  }
-
-  @include sm {
-
+// Media Queries - Handle Responsiveness
+@include sm {
+  .aboutme-container {
     .aboutme-img-container {
-      display: none;
+      display: none; // Hide image container on small screens
     }
 
     h1 {
-      font-size: $h1_sm;
+      font-size: 1.5rem;
     }
 
     h2 {
-      font-size: $h2_sm;
+      font-size: 1rem;
     }
 
-    button {
-      padding-right: 5%;
-      padding-left: 5%;
-      font-size: $h2_sm - 8px;
+    .project-icon {
+      padding: 2%;
+      font-size: 2rem;
     }
   }
+}
 
-  @include md {
-
+@include md {
+  .aboutme-container {
     .aboutme-img-container {
-      display: block;    
+      display: block; // Show image container on medium screens
     }
 
     h1 {
@@ -106,14 +70,15 @@
       font-size: 25px;
     }
 
-    button {
-      padding-right: 5%;
-      padding-left: 5%;
-      font-size: $h2_sm;
+    .project-icon {
+      padding: 2%;
+      font-size: 3rem;
     }
   }
+}
 
-  @include lg {
+@include lg {
+  .aboutme-container {
     h1 {
       font-size: 60px;
     }
@@ -125,17 +90,10 @@
     button {
       font-size: $h2_sm;
     }
-  }
 
-  img {
-    border-radius: 20px;
-    width: 80%;
+    .project-icon {
+      padding: 2%;
+      font-size: 3rem;
+    }
   }
 }
-
-.aboutme-img-container {
-  align-items: center;
-  width: 40%;
-}
-
-

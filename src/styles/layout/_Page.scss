@@ -1,15 +1,14 @@
 .layout-page {
   display: flex;
   flex-direction: column;
-  padding-bottom: 5%;
-
+  
   h1 {
     text-align: center;
   }
 
   @include sm {
     h1 {
-      font-size: $h1_sm + 15px;
+      font-size: $h1_sm;
     }
   }
 

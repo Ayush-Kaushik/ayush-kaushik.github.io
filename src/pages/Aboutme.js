@@ -3,7 +3,6 @@ import { UserContext } from "../context/UserContext";
 import Emoji from "../components/Emoji";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithubSquare, faLinkedin, faDev } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-scroll";
 
 const Aboutme = () => {
     const userContext = useContext(UserContext);
@@ -14,13 +13,8 @@ const Aboutme = () => {
                 className={"aboutme-container"}
             >
                 <span>
-                    <h1>{"Hi!"}<Emoji symbol={"👋"} label={"wave"} />{"    I'm Ayush Kaushik"}</h1>
+                    <h1>{"Hi! I'm Ayush Kaushik"}<Emoji symbol={"👋"} label={"wave"} className={"about-me-wave-icon"}/></h1>
                     <h2>{"I'm a Software Engineer @ OpenText."}</h2>
-                    <Link to="contact" smooth={true} duration={1000}>
-                        <button id={"#cta"}>
-                            <h3>{"Let's Connect!"}</h3>
-                        </button>
-                    </Link>
                     <div>
                         <a href={userContext.userInfo.html_url}><FontAwesomeIcon className={"project-icon"}
                             icon={faGithubSquare} /></a>

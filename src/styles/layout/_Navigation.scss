@@ -1,40 +1,42 @@
 .layout-navigation {
   background-color: $footerColor;
 
+  // Base styles for the navigation list
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
+    padding: 0; // Add padding reset for ul if needed
+    margin: 0;  // Remove margin if there is any unwanted spacing
+  }
 
-    li {
+  // Styles for each list item
+  li {
+    margin: 1rem 0; // Combine margin-top and margin-bottom
+  
+    a {
       text-decoration: none;
-      margin-bottom: 5%;
-      margin-top: 5%;
+      color: $linkColorUnvisited;
+      font-weight: bold;
+      cursor: pointer;
 
-      @include sm {
-        font-size: $h1_sm - 5px;
-      }
-
-      @include md {
-        font-size: $h1_md;
-      }
-
-      @include lg {
-        font-size: $h1_lg;
-      }
-
-      a {
-        text-decoration: none;
-        color: $linkColorUnvisited;
-        font-weight: bold;
-        cursor: pointer;
-      }
-
-      a:hover {
+      &:hover {
         color: $linkColorHover;
       }
     }
+
+    // Responsive font-size adjustments
+    @include sm {
+      font-size: 1rem;
+    }
+
+    @include md {
+      font-size: $h1_md;
+    }
+
+    @include lg {
+      font-size: $h1_lg;
+    }
   }
 }
-

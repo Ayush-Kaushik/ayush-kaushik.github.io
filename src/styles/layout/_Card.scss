@@ -95,7 +95,7 @@
       font-weight: normal;
 
       @include sm {
-        font-size: $h1_sm - 5px;
+        font-size: $h1_sm;
       }
 
       @include md {
