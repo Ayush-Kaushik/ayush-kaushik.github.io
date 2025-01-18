@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
-import { SHOW_PROJECTS } from "../constants/Project";
+import { projectList } from "../constants/Project";
 
 export const ProjectsContext = createContext();
 export const ProjectsProvider = ({ children }) => {
@@ -10,15 +10,18 @@ export const ProjectsProvider = ({ children }) => {
         const getProjects = async () => {
             const response = await axios.get("https://api.github.com/users/Ayush-Kaushik/repos?sort=created");
 
-            setProjects(response.data.filter(item => {
-                if (SHOW_PROJECTS.includes(item.id)) {
+            let data = response.data.filter(item => {
+                if (projectList.includes(item.id)) {
                     let date = new Date(item.created_at);
-                    item['created_at'] = date.toISOString().substring(0, 10);
+                    item['created_at'] = date.toUTCString();
                     return item;
                 }
 
-                return [];
-            }));
+                return "";
+            })
+
+
+            setProjects(data);
         }
 
         getProjects();

@@ -1,23 +1,19 @@
 import React from 'react';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
-const ProjectCard = ({project}) => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+const ProjectCard = ({ project }) => {
 
     return (
         <div className={"layout-card"}>
             <h1>{project.name}</h1>
-            <span className={"layout-card-subtitle"}>{project.created_at}</span>
+            <h2 className={"layout-card-subtitle"}>{project.created_at}</h2>
             {project.description ? <p>{project.description}</p> : ""}
 
             <span className={"layout-card-links"}>
                 {project.html_url ?
-                    <a href={project.html_url} target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon className={"project-icon"}
-                                                                 icon={faGithub} size={"2x"}/>{"  View Source"}
-                    </a> : ""}
-                {project.homepage ? <a href={project.homepage} target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon className={"project-icon"}
-                                                                                icon={faExternalLinkAlt}
-                                                                                size={"2x"}/> {"Live Demo"}</a> : ""}
+                    <a href={project.html_url} target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon className={"project-icon"} icon={faGithub} />{"  View Source"}</a> : ""}
+                {project.homepage ? <a href={project.homepage} target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon className={"project-icon"} icon={faExternalLinkAlt} /> {"Live Demo"}</a> : ""}
             </span>
         </div>
     )

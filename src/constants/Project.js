@@ -1,4 +1,7 @@
-export const SHOW_PROJECTS = [
+/**
+ * Only show projects with these IDs
+ */
+export const projectList = [
     289579210,
     287168767,
     254787189,

@@ -1,6 +1,8 @@
 .layout-card {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 
   // Default Margin for Card
   padding: 3% 5% 5% 5%;
@@ -25,14 +27,23 @@
     }
   }
 
-  .layout-card-img {
-    width: 100%;
-    
+  .layout-card-metadata {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .layout-card-img {    
     img {
-      width: 60%;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
       
       @include lg {
-        width: 30%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 15px;
       }
     }
   }

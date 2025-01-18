@@ -15,7 +15,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <Link activeClass="active" to="articles" spy={true} smooth={true}
-                          duration={2000}>{"Articles"}</Link>
+                          duration={2000}>{"Blogs"}</Link>
                 </li>
                 <li>
                     <a href={RESUME_LINK} download>{"Resume"}</a>

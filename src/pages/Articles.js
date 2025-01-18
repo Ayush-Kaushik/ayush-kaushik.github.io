@@ -9,7 +9,7 @@ const Articles = () => {
     return (
         <Element name={"articles"}>
             <div className={"layout-page"}>
-                <h1>{"Articles"}</h1>
+                <h1>{"Blogs"}</h1>
                 {
                     articleContext.articles.map(article => <ArticleCard key={article.id} article={article}/>)
                 }</div>
