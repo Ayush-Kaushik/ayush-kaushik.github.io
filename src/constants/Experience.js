@@ -68,7 +68,7 @@ export const EXPERIENCE = [
                 "Even pipeline as code per repository was not maintainable so learned how to use shared library and started setting up the pipeline infrastructure",
                 "Helped to bring drastic reduction in deployment times since everything that was done by shell scripting was handled by Jenkins pipeline"
             ],
-            "timeline": "January 2019 - August 2019",
+            "timeline": "Jan 2019 - Aug 2019",
             "image": "https://www.dropbox.com/s/82a1k6pz03lc9sy/c1f943_c965cd15c9e549d89685ae2c022e5ff2_mv2.png?raw=1",
             "company": {
                 "name": "Tekside.IO",
@@ -89,7 +89,7 @@ export const EXPERIENCE = [
                 "Started learning ReactJs framework to build a new version of Admin Portal",
                 "Built the application and learned many new concepts like class based components, state and props"
             ],
-            "timeline": "June 2018 - September 2018",
+            "timeline": "Jun 2018 - Sept 2018",
             "image": "https://www.dropbox.com/s/d9ru8zpmstcv5cc/inbox-marketer.jpg?raw=1",
             "company": {
                 "name": "Inbox Marketer",
@@ -109,7 +109,7 @@ export const EXPERIENCE = [
                 "Learned about REST API and Postman for the first time to prepare for building Co-Op project",
                 "Developed expertise in PHP and Symfony framework to build my first side project (Patient Medication Tracker)"
             ],
-            "timeline": "June 2017 - September 2017",
+            "timeline": "Jun 2017 - Sep 2017",
             "image": "https://www.dropbox.com/s/d9ru8zpmstcv5cc/inbox-marketer.jpg?raw=1",
             "company": {
                 "name": "Inbox Marketer",

@@ -3,12 +3,8 @@ import React from 'react';
 const ExperienceCard = ({experience}) => {
     return (
         <div className={"layout-card"}>
-            <div className={"layout-card-img"}>
-                <a href={experience.company.link}><img src={experience.image} alt={"experience"}/></a>
-            </div>
-
             <h1>{experience.workTitle}</h1>
-            <h2 className={"layout-card-subtitle"}>{experience.timeline}</h2>
+            <h2 className={"layout-card-subtitle"}><a href={experience.company.link}>{experience.company.name}</a> | {experience.timeline}</h2>
 
             <div className={"experience-description"}>
                 {experience.description ?
