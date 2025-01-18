@@ -2,33 +2,27 @@ export const EXPERIENCE = [
     {
         type: "hackathon",
         data: {
-            "workTitle": "HackRX2022 Third Prize Winner 🏆",
-            "project": {
-                "title": "Give Care",
-                "repository_url": "https://github.com/felicityy-li/Give-Care"
-            },
-            "description": [
-                "\"Give Care\" is a comprehensive tool to help caregivers manage their loved one's vaccines, medications, lab tests, and appointments by connecting caregivers with pharmacists to optimize their patients health outcomes."
-            ],
-            "responsibilities": [
-                "Led a team of 2 developers",
-                "Performed the pre-development setup for smooth functioning of team",
-                "Setup version control and defined guidelines for team when creating pull requests",
-                "Created a README file to outline project details and best practices",
-                "Designed and developed REST API in NodeJS and Express to perform CRUD based operations on a SQL Database",
-                "Integrated express server with Twilio service to send customized messages to test patients",
-                "Demonstrated the working prototype to judges at the end of competition"
-            ],
-            "accomplishments": [
-                "Our team won third prize in the hackathon 🏆",
-                "We were able to move from brainstorming stage to working prototype in less that 48 hours!",
-                "I was able to work under strict time constraints while helping fellow team members and moving the project to finish line"
-            ],
+            "workTitle": "Technical Lead",
             "timeline": "July 2022",
             "company": {
                 "name": "HackRX2022",
                 "link": "https://uwaterloo.ca/pharmacy/news/hackrx-us-students-across-canada-invited-pharmacy-and"
-            }
+            },
+            "project": {
+                "title": "Give Care",
+                "repository_url": "https://github.com/felicityy-li/Give-Care"
+            },
+            "challenge": "",
+            "description": "Give Care is a tool designed to help caregivers manage their loved one's vaccines, medications, lab tests, and appointments. It connects caregivers with pharmacists to optimize their patients health outcomes.",
+            "techstack": ["NodeJs", "SQL", "ReactJs", "Twilio"],
+            "responsibilities": [
+                "Developed a NodeJs and SQL based web application prototype for caregivers to manage medical records and appointments on behalf of their patients.",
+                "Led a team of two developers, establishing project guidelines and timelines, resulting in rapid transition from concept to prototype within 48 hours.",
+                "Learned and implemented Twilio Messaging API to provide SMS based appointment reminders to caregivers."
+            ],
+            "outcome": [
+                "Earned 🏆 3rd place out of 12 competing teams for the project, demonstrating strong problem-solving and innovation."
+            ]
         }
     },
     {

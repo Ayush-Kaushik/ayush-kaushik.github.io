@@ -2,52 +2,36 @@
   display: flex;
   flex-direction: column;
 
+  // Default Margin for Card
+  padding: 3% 5% 5% 5%;
+  margin: 2% 5% 5% 5%; // Top: 2%, Bottom: 2%, Left/Right: 2%
+
+  // Responsive Margin adjustments
   @include sm {
     margin-bottom: 10%;
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 5%;
   }
 
-  @include md {
+  @include md; @include lg {
     margin-bottom: 5%;
-    margin-right: 10%;
-    margin-left: 10%;
-  }
-
-  @include lg {
-    margin-bottom: 5%;
-    margin-right: 10%;
-    margin-left: 10%;
   }
 
   a {
     text-decoration: none;
     color: $linkColorUnvisited;
     font-weight: bold;
-  }
 
-  a:hover {
-    color: #02667f;
+    &:hover {
+      color: #02667f;
+    }
   }
 
   .layout-card-img {
     width: 100%;
-
-    @include sm {
-      img {
-        width: 60%;
-      }
-    }
-
-    @include md {
-      img {
-        width: 60%;
-      }
-    }
-
-    @include lg {
-      img {
+    
+    img {
+      width: 60%;
+      
+      @include lg {
         width: 30%;
       }
     }
@@ -55,36 +39,26 @@
 
   h1 {
     text-align: left;
-    color: $titleColor;
     margin-bottom: 1%;
-  }
+    font-size: 1.75rem; // Default font-size for small screens
 
-  @include sm {
-    h1 {
-      font-size: $h1_sm;
-    }
-
-    h2 {
-      font-size: $h2_sm;
-    }
-  }
-
-  @include md {
-    h1 {
+    @include md {
       font-size: $h1_md;
     }
 
-    h2 {
-      font-size: $h2_md;
+    @include lg {
+      font-size: $h1_lg;
     }
   }
 
-  @include lg {
-    h1 {
-      font-size: $h1_lg;
+  h2 {
+    font-size: $h2_sm; // Default font-size for small screens
+
+    @include md {
+      font-size: $h2_md;
     }
 
-    h2 {
+    @include lg {
       font-size: $h2_lg;
     }
   }
@@ -93,10 +67,12 @@
     a {
       margin-right: 5%;
       font-weight: normal;
-
-      @include sm {
-        font-size: $h1_sm;
-      }
+      background-color: #1a202c;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-weight: bolder;
+      
+      font-size: 1rem; // Default font-size for small screens
 
       @include md {
         font-size: $h1_md - 5px;
@@ -109,9 +85,13 @@
   }
 
   .layout-card-subtitle {
-    font-weight: lighter;
     color: $subTitleColor;
     margin-top: 1%;
     margin-bottom: 2%;
+    font-size: 1rem;
+  }
+
+  .layout-card-subtitle-02 {
+    font-size: 1.4rem;
   }
 }
