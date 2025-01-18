@@ -3,7 +3,7 @@ export const EXPERIENCE = [
         type: "hackathon",
         data: {
             "workTitle": "Technical Lead",
-            "timeline": "July 2022",
+            "timeline": "Jul 2022",
             "company": {
                 "name": "HackRX2022",
                 "link": "https://uwaterloo.ca/pharmacy/news/hackrx-us-students-across-canada-invited-pharmacy-and"
@@ -29,6 +29,7 @@ export const EXPERIENCE = [
         type: "job",
         data: {
             "workTitle": "DevOps Developer",
+            "techstack": [],
             "description": [
                 "Introduced to YAML format for the first time when building deployment files",
                 "Learned and excelled Docker as a single node and Docker swarm",
@@ -44,7 +45,7 @@ export const EXPERIENCE = [
             "accomplishments": [
 
             ],
-            "timeline": "May 2020 - June 2021",
+            "timeline": "May 2020 - Jun 2021",
             "image": "https://www.dropbox.com/s/82a1k6pz03lc9sy/c1f943_c965cd15c9e549d89685ae2c022e5ff2_mv2.png?raw=1",
             "company": {
                 "name": "Tekside.IO",
@@ -89,7 +90,7 @@ export const EXPERIENCE = [
                 "Started learning ReactJs framework to build a new version of Admin Portal",
                 "Built the application and learned many new concepts like class based components, state and props"
             ],
-            "timeline": "Jun 2018 - Sept 2018",
+            "timeline": "Jun 2018 - Sep 2018",
             "image": "https://www.dropbox.com/s/d9ru8zpmstcv5cc/inbox-marketer.jpg?raw=1",
             "company": {
                 "name": "Inbox Marketer",

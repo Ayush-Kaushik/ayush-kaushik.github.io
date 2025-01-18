@@ -6,7 +6,7 @@ const ExperienceHackathonCard = ({ experience }) => {
     return (
         <div className={"layout-card"}>
             <h1>{experience.workTitle}</h1>
-            <h2 className={"layout-card-subtitle"}>{experience.company.name} | {experience.timeline}</h2>
+            <h2 className={"layout-card-subtitle"}><a href={experience.company.link}>{experience.company.name}</a> | {experience.timeline}</h2>
 
             <div className={"experience-description"}>
                 <span>{experience.challenge}</span>
