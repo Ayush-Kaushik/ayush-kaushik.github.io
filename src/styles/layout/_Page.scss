@@ -9,12 +9,6 @@
     text-align: center;
   }
 
-  @include mixins.sm {
-    h1 {
-      font-size: variables.$h1_sm;
-    }
-  }
-
   @include mixins.md {
     h1 {
       font-size: variables.$h1_md + 15px;
