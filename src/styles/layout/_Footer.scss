@@ -1,7 +1,9 @@
+@use "./variables";
+
 .layout-footer {
   display: flex;
   flex-direction: column;
-  background-color: $footerColor;
+  background-color: variables.$footerColor;
 
   ul {
     display: flex;
@@ -15,11 +17,11 @@
       a {
         font-weight: bold;
         text-decoration: none;
-        color: $footerLinkColor;
+        color: variables.$footerLinkColor;
       }
 
       a:hover {
-        color: $footerColorHover;
+        color: variables.$footerColorHover;
       }
     }
   }
@@ -27,6 +29,6 @@
   div {
     text-align: center;
     font-weight: bold;
-    color: $footerLinkColor;
+    color: variables.$footerLinkColor;
   }
 }

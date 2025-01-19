@@ -1,17 +1,19 @@
+@use "./layout/mixins";
+
 .experience-description {
   font-weight: normal;
 
   ul {
     li {
-      @include sm {
+      @include mixins.sm {
         margin-bottom: 5%;
       }
 
-      @include md {
+      @include mixins.md {
         margin-bottom: 5%;
       }
 
-      @include lg {
+      @include mixins.lg {
         margin-bottom: 2%;
       }
     }

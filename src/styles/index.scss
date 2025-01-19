@@ -1,42 +1,8 @@
-$backgroundColorPrimary: #ffffff;
-$backgroundColorSecondary: #f6f6f8;
-$linkColorUnvisited: #09c5f1;
-$linkColorHover: #02667f;
-$footerColor: #1a202c;
-$footerLinkColor: #ece9e9;
-$footerColorHover: #09c5f1;
-$iconColor: #000000;
-$titleColor: #4b4a4a;
-$subTitleColor: #666565;
-$subTitleColorSecondary: #979595;
-$callToActionColor: #000000;
-
-$buttonBackgroundColorPrimary: #ffc96c;
-
-$h1_sm: 2rem;
-$h1_lg: 30px;
-$h1_md: 20px;
-
-$h2_sm: 1.5rem;
-$h2_lg: 20px;
-$h2_md: 20px;
-
-$screen-sm-min: 300px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
-
-@import "mixins";
-@import "layout/Page";
-@import "layout/Card";
-@import "layout/Navigation";
-@import "layout/Footer";
-
-@import "Aboutme";
-@import "Project";
-@import "Experience";
-@import "Skill";
-@import "Contact";
+@use "Aboutme";
+@use "Project";
+@use "Experience";
+@use "Skill";
+@use "Contact";
 
 html, body {
   margin: 0;

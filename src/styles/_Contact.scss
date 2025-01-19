@@ -1,7 +1,9 @@
+@use "./layout/variables";
+
 .contact-container {
   display: flex;
   flex-direction: column;
-  background-color: $backgroundColorSecondary;
+  background-color: variables.$backgroundColorSecondary;
 
   input {
     margin-bottom: 3%;
@@ -10,13 +12,13 @@
   }
 
   input:focus {
-    border-color: $footerColorHover;
+    border-color: variables.$footerColorHover;
   }
 
   div {
     button{
-      color: $backgroundColorPrimary;
-      background-color: $footerColor;
+      color: variables.$backgroundColorPrimary;
+      background-color: variables.$footerColor;
       border-radius: 4px;
       cursor: pointer;
     }

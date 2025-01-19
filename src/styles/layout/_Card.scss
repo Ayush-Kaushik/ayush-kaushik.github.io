@@ -1,3 +1,6 @@
+@use "./mixins";
+@use "./variables";
+
 .layout-card {
   display: flex;
   flex-direction: column;
@@ -9,17 +12,19 @@
   margin: 2% 5% 5% 5%; // Top: 2%, Bottom: 2%, Left/Right: 2%
 
   // Responsive Margin adjustments
-  @include sm {
+  @include mixins.sm {
     margin-bottom: 10%;
   }
 
-  @include md; @include lg {
+  @include mixins.md;
+
+  @include mixins.lg {
     margin-bottom: 5%;
   }
 
   a {
     text-decoration: none;
-    color: $linkColorUnvisited;
+    color: variables.$linkColorUnvisited;
     font-weight: bold;
 
     &:hover {
@@ -31,17 +36,17 @@
     display: flex;
     width: 80%;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-bottom: 0.5rem;
   }
 
-  .layout-card-img {    
+  .layout-card-img {
     img {
       width: 100%;
       overflow: hidden;
       border-radius: 15px;
-      
-      @include lg {
+
+      @include mixins.lg {
         width: 100%;
         overflow: hidden;
         border-radius: 15px;
@@ -54,24 +59,24 @@
     margin-bottom: 1%;
     font-size: 1.75rem; // Default font-size for small screens
 
-    @include md {
-      font-size: $h1_md;
+    @include mixins.md {
+      font-size: variables.$h1_md;
     }
 
-    @include lg {
-      font-size: $h1_lg;
+    @include mixins.lg {
+      font-size: variables.$h1_lg;
     }
   }
 
   h2 {
-    font-size: $h2_sm; // Default font-size for small screens
+    font-size: variables.$h2_sm; // Default font-size for small screens
 
-    @include md {
-      font-size: $h2_md;
+    @include mixins.md {
+      font-size: variables.$h2_md;
     }
 
-    @include lg {
-      font-size: $h2_lg;
+    @include mixins.lg {
+      font-size: variables.$h2_lg;
     }
   }
 
@@ -83,21 +88,21 @@
       padding: 0.5rem;
       border-radius: 0.5rem;
       font-weight: bolder;
-      
+
       font-size: 1rem; // Default font-size for small screens
 
-      @include md {
-        font-size: $h1_md - 5px;
+      @include mixins.md {
+        font-size: variables.$h1_md - 5px;
       }
 
-      @include lg {
-        font-size: $h1_lg - 15px;
+      @include mixins.lg {
+        font-size: variables.$h1_lg - 15px;
       }
     }
   }
 
   .layout-card-subtitle {
-    color: $subTitleColor;
+    color: variables.$subTitleColor;
     margin-top: 1%;
     margin-bottom: 2%;
     font-size: 1rem;

@@ -1,3 +1,6 @@
+@use "./layout/mixins";
+@use "./layout/variables";
+
 // Base styles for the container
 .aboutme-container {
   text-align: center;
@@ -11,15 +14,15 @@
   }
 
   a {
-    color: $iconColor;
+    color: variables.$iconColor;
 
     &:hover {
-      color: $footerColor;
+      color: variables.$footerColor;
     }
 
     &:visited,
     &:focus {
-      color: $iconColor;
+      color: variables.$iconColor;
     }
   }
 
@@ -35,7 +38,7 @@
 }
 
 // Media Queries - Handle Responsiveness
-@include sm {
+@include mixins.sm {
   .aboutme-container {
     .aboutme-img-container {
       display: none; // Hide image container on small screens
@@ -56,7 +59,7 @@
   }
 }
 
-@include md {
+@include mixins.md {
   .aboutme-container {
     .aboutme-img-container {
       display: block; // Show image container on medium screens
@@ -77,7 +80,7 @@
   }
 }
 
-@include lg {
+@include mixins.lg {
   .aboutme-container {
     h1 {
       font-size: 60px;
@@ -88,7 +91,7 @@
     }
 
     button {
-      font-size: $h2_sm;
+      font-size: variables.$h2_sm;
     }
 
     .project-icon {

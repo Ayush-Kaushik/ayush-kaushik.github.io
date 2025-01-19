@@ -1,3 +1,5 @@
+@use "./layout/variables";
+
 .project-container {
-  background: $backgroundColorSecondary;
+  background: variables.$backgroundColorSecondary;
 }

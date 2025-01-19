@@ -1,5 +1,7 @@
+@use "./layout/variables";
+
 .skill-container {
-  background: $backgroundColorSecondary;
+  background: variables.$backgroundColorSecondary;
 
   h2 {
     margin-left: 2%;

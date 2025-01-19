@@ -1,5 +1,8 @@
+@use "./mixins";
+@use "./variables";
+
 .layout-navigation {
-  background-color: $footerColor;
+  background-color: variables.$footerColor;
 
   // Base styles for the navigation list
   ul {
@@ -17,26 +20,26 @@
   
     a {
       text-decoration: none;
-      color: $linkColorUnvisited;
+      color: variables.$linkColorUnvisited;
       font-weight: bold;
       cursor: pointer;
 
       &:hover {
-        color: $linkColorHover;
+        color: variables.$linkColorHover;
       }
     }
 
     // Responsive font-size adjustments
-    @include sm {
+    @include mixins.sm {
       font-size: 1rem;
     }
 
-    @include md {
-      font-size: $h1_md;
+    @include mixins.md {
+      font-size: variables.$h1_md;
     }
 
-    @include lg {
-      font-size: $h1_lg;
+    @include mixins.lg {
+      font-size: variables.$h1_lg;
     }
   }
 }
