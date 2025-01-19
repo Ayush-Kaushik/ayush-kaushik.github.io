@@ -1,8 +1,12 @@
+@use "./layout/Card";
+@use "./layout/Footer";
+
 @use "Aboutme";
 @use "Project";
 @use "Experience";
 @use "Skill";
 @use "Contact";
+@use "Navbar";
 
 html, body {
   margin: 0;
