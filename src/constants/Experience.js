@@ -56,7 +56,7 @@ export const EXPERIENCE = [
     {
         type: "job",
         data: {
-            "workTitle": "Develop and Support Specialist Co-Op",
+            "workTitle": "Development and Support Specialist Co-Op",
             "description": [
                 "This role was leaning more towards DevOps tasks",
                 "Learned Kubernetes and rancher for the first time. I found the learning curve very steep since it was difficult for me to wrap my head around containers",

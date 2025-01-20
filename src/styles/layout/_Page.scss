@@ -14,10 +14,4 @@
       font-size: variables.$h1_md + 15px;
     }
   }
-
-  @include mixins.lg {
-    h1 {
-      font-size: variables.$h1_lg + 5px;
-    }
-  }
 }

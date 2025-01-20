@@ -9,7 +9,7 @@
 
   // Default Margin for Card
   padding: 3% 5% 5% 5%;
-  margin: 2% 5% 5% 5%; // Top: 2%, Bottom: 2%, Left/Right: 2%
+  margin: 2% 5% 5% 5%;
 
   // Responsive Margin adjustments
   @include mixins.sm {
@@ -19,7 +19,8 @@
   @include mixins.md;
 
   @include mixins.lg {
-    margin-bottom: 5%;
+    padding: 3% 5% 5% 5%;
+    margin: 2% 25% 2% 25%;
   }
 
   a {
@@ -60,11 +61,11 @@
     font-size: 1.75rem; // Default font-size for small screens
 
     @include mixins.md {
-      font-size: variables.$h1_md;
+      font-size: 1.5rem;
     }
 
     @include mixins.lg {
-      font-size: variables.$h1_lg;
+      font-size: 1.5rem;
     }
   }
 
