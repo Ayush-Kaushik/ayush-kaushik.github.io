@@ -23,7 +23,7 @@ jobs:
 
     - name: Build the project
       env:
-        REACT_APP_CONTACT_ME: ${{ vars.REACT_APP_API_KEY }}
+        REACT_APP_CONTACT_ME: ${{ vars.REACT_APP_CONTACT_ME }}
       run: npm run build
 
     - name: Deploy to GitHub Pages
