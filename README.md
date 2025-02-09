@@ -1,17 +1,16 @@
 # Welcome to my Portfolio Website Repository! 👋
 
-Access link: https://ayush-kaushik.github.io/portfolio/
+🔗 Live Website: https://ayush-kaushik.github.io
 
-This website is designed to be easy to navigate and provides an overview of my `skills`, `experience` and `projects`. It also includes my `resume` and `contact` information, making it easy for potential employers and clients to get in touch with me.
+This portfolio website showcases my **skills**, **experience**, and **projects** in an intuitive and easy-to-navigate design. You’ll also find my resume and contact details, making it simple for potential employers and clients to connect with me.
 
-It also integrates with my `GitHub`, `LinkedIn` and `Dev.To` profiles to provide you a better understanding of my skills and experience.
+For a deeper insight into my work, the site seamlessly integrates with my **GitHub**, **LinkedIn**, and **Dev.to** profiles.
 
-## Build your own Portfolio with ease! 💪🦾
+## Build your own automated Portfolio Website! 💪🦾
 
-I have also created an article where I listed step by step process so you could build your own portfolio website with ease!
+I’ve written a step-by-step guide to help you create your own portfolio website effortlessly! Check it out here: <br/>
+📖 Article: [React + GitHub = Professional Portfolio Website ](https://dev.to/ayushkaushik/react-github-awesome-portfolio-website-3gi)
 
-Access here: https://dev.to/ayushkaushik/react-github-awesome-portfolio-website-3gi
+If you have any questions or feedback, feel free to reach out.
 
-Please don't hesitate to each out to me.
-
-Thanks for visiting! 😊
+Thanks for stopping by! 😊✨
