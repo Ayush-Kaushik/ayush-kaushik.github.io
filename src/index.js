@@ -6,16 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import { ProjectsProvider } from "./context/ProjectsContext";
 import { ArticleProvider } from "./context/ArticlesContext";
 import { UserProvider } from "./context/UserContext";
+import { ContactProvider } from './context/ContactContext';
 
 ReactDOM.render(
     <React.StrictMode>
-        <UserProvider>
-            <ProjectsProvider>
-                <ArticleProvider>
-                    <App />
-                </ArticleProvider>
-            </ProjectsProvider>
-        </UserProvider>
+        <ContactProvider>
+            <UserProvider>
+                <ProjectsProvider>
+                    <ArticleProvider>
+                        <App />
+                    </ArticleProvider>
+                </ProjectsProvider>
+            </UserProvider>
+        </ContactProvider>
     </React.StrictMode>
     ,
     document.getElementById('root')
