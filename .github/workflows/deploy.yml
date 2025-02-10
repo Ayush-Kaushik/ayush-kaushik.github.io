@@ -26,7 +26,6 @@ jobs:
       env:
         REACT_APP_CONTACT_ME: ${{ secrets.CONTACT_ME }}
       
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
