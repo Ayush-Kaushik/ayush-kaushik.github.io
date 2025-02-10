@@ -9,13 +9,11 @@ export const useContactContext = () => {
 
 export const ContactProvider = (props) => {
     const sendMessage = async (email, name, message) => {
-        let contact_url = process.env.REACT_APP_CONTACT_ME;
-
-        if (contact_url === null) {
+        if (process.env.REACT_APP_CONTACT_ME == null || process.env.REACT_APP_CONTACT_ME === "") {
             return false;
         }
 
-        await axios.post(contact_url, {
+        await axios.post(process.env.REACT_APP_CONTACT_ME, {
             name: name,
             email: email,
             message: message
