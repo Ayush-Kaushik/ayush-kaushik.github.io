@@ -7,7 +7,10 @@ export const ArticleProvider = ({children}) => {
 
     useEffect( () => {
           const getArticles = async() => {
-              const response = await axios.get(`https://dev.to/api/articles?username=ayushkaushik&state=fresh`);
+              const response = await axios.get(`https://dev.to/api/articles?username=ayushkaushik&state=fresh`, {
+                    headers: { "Cache-Control": "no-cache" }
+              });
+              
               setArticles(response.data);
           }
 
