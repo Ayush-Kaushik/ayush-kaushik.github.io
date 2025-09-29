@@ -27,7 +27,12 @@ const Aboutme = () => {
                     <h1>{"Hi! I'm Ayush Kaushik"}<Emoji symbol={"👋"} label={"wave"} className={"about-me-wave-icon"} /></h1>
                     <h2>{"I'm a Software Engineer @ OpenText."}</h2>
                     <div>
-                        <a href={userContext.userInfo.html_url} onClick={() => handleExternalLinkClick('GitHub')}><FontAwesomeIcon className={"project-icon"}
+                        <a
+                            href={userContext.userInfo.html_url}
+                            onClick={() => handleExternalLinkClick('GitHub')}
+                            target='_blank'
+                            rel='noreferrer noopener'
+                        ><FontAwesomeIcon className={"project-icon"}
                             icon={faGithubSquare} /></a>
                         <a href={"https://www.linkedin.com/in/ayushkaushik"} onClick={() => handleExternalLinkClick('LinkedIn')}><FontAwesomeIcon
                             className={"project-icon"}
