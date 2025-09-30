@@ -8,6 +8,17 @@ const ProjectCard = ({ project }) => {
         <div className={"layout-card"}>
             <h1>{project.name}</h1>
             <h2 className={"layout-card-subtitle"}>{project.created_at}</h2>
+
+            {project.topics && project.topics.length > 0 && (
+                <div className="project-tags">
+                    {project.topics.map((topic, index) => (
+                        <span key={index} className="project-tag">
+                            {topic}
+                        </span>
+                    ))}
+                </div>
+            )}
+
             {project.description ? <p>{project.description}</p> : ""}
 
             <span className={"layout-card-links"}>
