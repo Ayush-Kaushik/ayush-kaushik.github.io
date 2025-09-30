@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
     return (
         <div className={"layout-card"}>
             <h1>{project.name}</h1>
-            <h2 className={"layout-card-subtitle"}>{project.created_at}</h2>
+            <h2 className={"layout-card-subtitle"}>{project.updated_at}</h2>
 
             {project.topics && project.topics.length > 0 && (
                 <div className="project-tags">

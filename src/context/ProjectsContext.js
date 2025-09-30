@@ -12,8 +12,8 @@ export const ProjectsProvider = ({ children }) => {
 
             let data = response.data.filter(item => {
                 if (projectList.includes(item.id)) {
-                    let date = new Date(item.created_at);
-                    item['created_at'] = date.toUTCString();
+                    let date = new Date(item.updated_at);
+                    item['updated_at'] = "🗓️ Last Updated: " + date.toDateString();
                     return item;
                 }
 
