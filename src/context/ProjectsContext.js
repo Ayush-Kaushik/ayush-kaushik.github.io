@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { projectList } from "../constants/Project";
 
@@ -18,8 +18,7 @@ export const ProjectsProvider = ({ children }) => {
                 }
 
                 return "";
-            })
-
+            });
 
             setProjects(data);
         }
