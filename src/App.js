@@ -1,5 +1,5 @@
 import './App.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Projects from "./pages/Projects";
 import Articles from "./pages/Articles";
 import Aboutme from "./pages/Aboutme";
@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 
 import FloatingSidebar from './components/FloatingSidebar';
 import SidebarToggle from './components/SidebarToggle';
+import { sendGAEvent } from './utils/analytics';
 
 function App() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -19,9 +20,17 @@ function App() {
         document.title = "Ayush Kaushik";
     }, []);
 
+    const handleSidebarOpen = useCallback(() => {
+        setIsSidebarVisible(true);
+        sendGAEvent('chat_open', {
+            event_category: 'User Interaction',
+            event_label: 'AI Chat Opened'
+        });
+    }, []);
+
     return (
         <div>
-            <SidebarToggle onClick={() => setIsSidebarVisible(true)} />
+            <SidebarToggle onClick={handleSidebarOpen} />
             <FloatingSidebar 
                 isVisible={isSidebarVisible}
                 onClose={() => setIsSidebarVisible(false)}
