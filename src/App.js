@@ -1,5 +1,5 @@
 import './App.scss';
-import React, {useEffect} from 'react';
+import { useEffect, useState } from 'react';
 import Projects from "./pages/Projects";
 import Articles from "./pages/Articles";
 import Aboutme from "./pages/Aboutme";
@@ -9,22 +9,30 @@ import Navbar from "./components/Navbar";
 import Skills from "./pages/Skills";
 import Contact from './pages/Contact';
 
+import FloatingSidebar from './components/FloatingSidebar';
+import SidebarToggle from './components/SidebarToggle';
+
 function App() {
+    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
     useEffect(() => {
         document.title = "Ayush Kaushik";
     }, []);
 
-
     return (
         <div>
+            <SidebarToggle onClick={() => setIsSidebarVisible(true)} />
+            <FloatingSidebar 
+                isVisible={isSidebarVisible}
+                onClose={() => setIsSidebarVisible(false)}
+            />
             <Aboutme/>
             <Navbar/>
             <Skills/>
             <Experience/>
             <Projects/>
             <Articles/>
-            <Contact />
+            <Contact/>
             <Footer/>
         </div>
     );
