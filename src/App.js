@@ -30,13 +30,23 @@ function App() {
                 isVisible={isSidebarVisible}
                 onClose={() => setIsSidebarVisible(false)}
             />
-            <Aboutme />
-            <Navbar />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Articles />
-            <Contact />
+
+            <main>
+                <Aboutme />
+
+                <header>
+                    <Navbar />
+                </header>
+
+
+                <Skills />
+                <Experience />
+                <Projects />
+                <Articles />
+                <Contact />
+
+            </main>
+
             <Footer />
         </div>
     );
