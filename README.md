@@ -11,6 +11,11 @@ For a deeper insight into my work, the site seamlessly integrates with my **GitH
 I’ve written a step-by-step guide to help you create your own portfolio website effortlessly! Check it out here: <br/>
 📖 Article: [React + GitHub = Professional Portfolio Website ](https://dev.to/ayushkaushik/react-github-awesome-portfolio-website-3gi)
 
+| Page Speed Insights    | Link |
+| -------- | ---- |
+| December 16, 2025  | https://pagespeed.web.dev/analysis/https-ayushkaushik-pages-dev/37cbxickzx?form_factor=mobile |
+
 If you have any questions or feedback, feel free to reach out.
 
 Thanks for stopping by! 😊✨
+
