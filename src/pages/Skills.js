@@ -1,9 +1,8 @@
-import { Element } from "react-scroll";
 import { TECHNICAL_SKILLS } from "../constants/Skills";
 
 const Skills = () => {
     return (
-        <Element name={"skills"}>
+        <div id="skills">
             <div className={"layout-page skill-container"}>
 
                 <h1>{"Skills"}</h1>
@@ -78,7 +77,7 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-        </Element>
+        </div>
     )
 };
 

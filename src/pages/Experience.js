@@ -1,11 +1,10 @@
 import { EXPERIENCE } from "../constants/Experience";
 import ExperienceCard from "../components/ExperienceCard";
 import ExperienceHackathonCard from "../components/ExperienceHackathonCard";
-import { Element } from "react-scroll";
 
 const Experience = () => {
     return (
-        <Element name={"experience"}>
+        <div id="experience">
             <div className={"layout-page"}>
                 <h1>{"Experience"}</h1>
                 <div>{EXPERIENCE.map((item, index) => {
@@ -21,7 +20,7 @@ const Experience = () => {
                 })}
                 </div>
             </div>
-        </Element>
+        </div>
     )
 };
 

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Element } from "react-scroll";
+import { useState } from 'react';
 import { useContactContext } from "../context/ContactContext";
 
 const Contact = () => {
@@ -25,7 +24,7 @@ const Contact = () => {
         }
     }
     return (
-        <Element name={"contact"}>
+        <div id="contact">
             <div className={"layout-page contact-container"}>
                 <h1>{"Let's Connect!"}</h1>
                 <div className={"layout-card"}>
@@ -49,7 +48,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </Element>
+        </div>
     )
 };
 export default Contact;
