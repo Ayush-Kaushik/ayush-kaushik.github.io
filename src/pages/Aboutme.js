@@ -17,20 +17,27 @@ const Aboutme = () => {
                     <h2>{"I'm a Software Engineer @ OpenText."}</h2>
                     <div>
                         <a
-                            href={userContext.userInfo.html_url}
+                            href="https://github.com/Ayush-Kaushik"
                             target='_blank'
                             rel='noreferrer noopener'
                             aria-label="GitHub profile"
-                        ><FontAwesomeIcon className={"project-icon"}
-                            icon={faGithubSquare} /></a>
+                        >
+                            <FontAwesomeIcon className={"project-icon"}
+                                icon={faGithubSquare} /></a>
                         <a
                             aria-label="LinkedIn profile"
-                            href={"https://www.linkedin.com/in/ayushkaushik"}><FontAwesomeIcon
+                            target='_blank'
+                            rel='noreferrer noopener'
+                            href={"https://www.linkedin.com/in/ayushkaushik"}>
+                            <FontAwesomeIcon
                                 className={"project-icon"}
                                 icon={faLinkedin} /></a>
                         <a
                             aria-label="Dev.to profile"
-                            href={"https://dev.to/ayushkaushik"}><FontAwesomeIcon className={"project-icon"}
+                            target='_blank'
+                            rel='noreferrer noopener'
+                            href={"https://dev.to/ayushkaushik"}>
+                            <FontAwesomeIcon className={"project-icon"}
                                 icon={faDev} /></a>
                     </div>
                 </span>
