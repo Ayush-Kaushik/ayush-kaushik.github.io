@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDev } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faBookReader } from "@fortawesome/free-solid-svg-icons";
@@ -21,9 +20,11 @@ const ArticleCard = ({ article }) => {
             <span className={"layout-card-links"}>
                 <a
                     href={article.url}
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Read more about ${article.title}`}><FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}
+                    aria-label={`Read more about ${article.title}`}>
+                    <FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}
+                    <span className="sr-only"> {article.title}</span>
                 </a>
             </span>
 

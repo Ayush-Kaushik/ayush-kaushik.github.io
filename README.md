@@ -14,6 +14,7 @@ I’ve written a step-by-step guide to help you create your own portfolio websit
 | Page Speed Insights    | Link |
 | -------- | ---- |
 | December 16, 2025  | https://pagespeed.web.dev/analysis/https-ayushkaushik-pages-dev/37cbxickzx?form_factor=mobile |
+| December 16, 2025 | https://pagespeed.web.dev/analysis/https-ayushkaushik-pages-dev/kqgxc3dix5?form_factor=mobile |
 
 If you have any questions or feedback, feel free to reach out.
 
