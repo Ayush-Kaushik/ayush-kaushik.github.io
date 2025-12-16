@@ -1,8 +1,11 @@
-const ExperienceCard = ({experience}) => {
+const ExperienceCard = ({ experience }) => {
     return (
         <div className={"layout-card"}>
             <h1>{experience.workTitle}</h1>
-            <h2 className={"layout-card-subtitle"}><a href={experience.company.link}>{experience.company.name}</a> | {experience.timeline}</h2>
+            <h2 className={"layout-card-subtitle"}><a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={experience.company.link}>{experience.company.name}</a> | {experience.timeline}</h2>
 
             <div className={"experience-description"}>
                 {experience.description ?

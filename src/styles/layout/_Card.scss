@@ -26,11 +26,10 @@
   a {
     text-decoration: none;
     color: variables.$linkColorUnvisited;
+    background-color: #007bff;
     font-weight: bold;
-
-    &:hover {
-      color: #02667f;
-    }
+    padding: 5px;
+    border-radius: 0.5rem;
   }
 
   .layout-card-metadata {
@@ -85,7 +84,7 @@
     a {
       margin-right: 5%;
       font-weight: normal;
-      background-color: #1a202c;
+      background-color: #007bff;
       padding: 0.5rem;
       border-radius: 0.5rem;
       font-weight: bolder;
@@ -103,7 +102,6 @@
   }
 
   .layout-card-subtitle {
-    color: variables.$subTitleColor;
     margin-top: 1%;
     margin-bottom: 2%;
     font-size: 1rem;
