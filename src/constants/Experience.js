@@ -49,7 +49,7 @@ export const EXPERIENCE = [
             "image": "https://www.dropbox.com/s/82a1k6pz03lc9sy/c1f943_c965cd15c9e549d89685ae2c022e5ff2_mv2.png?raw=1",
             "company": {
                 "name": "Tekside.IO",
-                "link": "https://www.tekside.io/"
+                "link": "https://tekside.io/"
             }
         }
     },
