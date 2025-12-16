@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { projectList } from "../constants/Project";
 
@@ -12,14 +12,13 @@ export const ProjectsProvider = ({ children }) => {
 
             let data = response.data.filter(item => {
                 if (projectList.includes(item.id)) {
-                    let date = new Date(item.created_at);
-                    item['created_at'] = date.toUTCString();
+                    let date = new Date(item.updated_at);
+                    item['updated_at'] = "🗓️ Last Updated: " + date.toDateString();
                     return item;
                 }
 
                 return "";
-            })
-
+            });
 
             setProjects(data);
         }
