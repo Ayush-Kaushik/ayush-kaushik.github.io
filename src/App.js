@@ -11,7 +11,6 @@ import Contact from './pages/Contact';
 
 import FloatingSidebar from './components/FloatingSidebar';
 import SidebarToggle from './components/SidebarToggle';
-import { sendGAEvent } from './utils/analytics';
 
 function App() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -22,10 +21,6 @@ function App() {
 
     const handleSidebarOpen = useCallback(() => {
         setIsSidebarVisible(true);
-        sendGAEvent('chat_open', {
-            event_category: 'User Interaction',
-            event_label: 'AI Chat Opened'
-        });
     }, []);
 
     return (
