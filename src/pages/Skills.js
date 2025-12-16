@@ -1,6 +1,5 @@
-import React from 'react';
-import {Element} from "react-scroll";
-import {TECHNICAL_SKILLS} from "../constants/Skills";
+import { Element } from "react-scroll";
+import { TECHNICAL_SKILLS } from "../constants/Skills";
 
 const Skills = () => {
     return (
@@ -15,9 +14,9 @@ const Skills = () => {
                         {
                             TECHNICAL_SKILLS.programming_languages.map((item, index) => (
                                 <span key={index}>
-                                <h3>{item.label}</h3>
-                                <p>{item.toolTip}</p>
-                            </span>
+                                    <h3>{item.label}</h3>
+                                    <p>{item.toolTip}</p>
+                                </span>
                             ))
                         }
                     </div>
@@ -29,9 +28,9 @@ const Skills = () => {
                         {
                             TECHNICAL_SKILLS.markup_languages.map((item, index) => (
                                 <span key={index}>
-                                <h3>{item.label}</h3>
-                                <p>{item.toolTip}</p>
-                            </span>
+                                    <h3>{item.label}</h3>
+                                    <p>{item.toolTip}</p>
+                                </span>
                             ))
                         }
                     </div>
@@ -43,9 +42,9 @@ const Skills = () => {
                         {
                             TECHNICAL_SKILLS.frameworks.map((item, index) => (
                                 <span key={index}>
-                            <h3>{item.label}</h3>
-                            <p>{item.toolTip}</p>
-                        </span>
+                                    <h3>{item.label}</h3>
+                                    <p>{item.toolTip}</p>
+                                </span>
                             ))
                         }
                     </div>
@@ -57,9 +56,9 @@ const Skills = () => {
                         {
                             TECHNICAL_SKILLS.automation.map((item, index) => (
                                 <span key={index}>
-                                <h3>{item.label}</h3>
-                                <p>{item.toolTip}</p>
-                            </span>
+                                    <h3>{item.label}</h3>
+                                    <p>{item.toolTip}</p>
+                                </span>
                             ))
                         }
                     </div>
@@ -71,9 +70,9 @@ const Skills = () => {
                         {
                             TECHNICAL_SKILLS.other.map((item, index) => (
                                 <span key={index}>
-                            <h3>{item.label}</h3>
-                            <p>{item.toolTip}</p>
-                        </span>
+                                    <h3>{item.label}</h3>
+                                    <p>{item.toolTip}</p>
+                                </span>
                             ))
                         }
                     </div>

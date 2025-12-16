@@ -26,18 +26,18 @@ function App() {
     return (
         <div>
             <SidebarToggle onClick={handleSidebarOpen} />
-            <FloatingSidebar 
+            <FloatingSidebar
                 isVisible={isSidebarVisible}
                 onClose={() => setIsSidebarVisible(false)}
             />
-            <Aboutme/>
-            <Navbar/>
-            <Skills/>
-            <Experience/>
-            <Projects/>
-            <Articles/>
-            <Contact/>
-            <Footer/>
+            <Aboutme />
+            <Navbar />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Articles />
+            <Contact />
+            <Footer />
         </div>
     );
 }

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ExperienceCard = ({experience}) => {
     return (
         <div className={"layout-card"}>

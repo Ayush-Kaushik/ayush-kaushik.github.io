@@ -19,7 +19,10 @@ const ArticleCard = ({ article }) => {
             </div>
 
             <span className={"layout-card-links"}>
-                <a href={article.url}><FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}</a>
+                <a
+                    href={article.url}
+                    aria-label={`Read more about ${article.title}`}><FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}
+                </a>
             </span>
 
 

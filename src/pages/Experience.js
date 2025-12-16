@@ -1,4 +1,3 @@
-import React from 'react';
 import { EXPERIENCE } from "../constants/Experience";
 import ExperienceCard from "../components/ExperienceCard";
 import ExperienceHackathonCard from "../components/ExperienceHackathonCard";
