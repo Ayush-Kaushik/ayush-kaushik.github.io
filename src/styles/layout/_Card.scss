@@ -112,4 +112,27 @@
   .layout-card-subtitle-02 {
     font-size: 1.4rem;
   }
+
+  .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .project-tag {
+        background-color: #f1f1f1;
+        color: #333;
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        text-transform: capitalize;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            background-color: #09c5f1;
+            color: #fff;
+        }
+    }
 }

@@ -1,0 +1,171 @@
+@import './layout/variables';
+
+.floating-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.floating-sidebar {
+    position: fixed;
+    left: -50vw;
+    top: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: $backgroundColorPrimary;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &.visible {
+        transform: translateX(50vw);
+
+        .sidebar-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .sidebar-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+        color: $titleColor;
+        font-size: 1.2rem;
+        z-index: 2;
+
+        &:hover {
+            color: $linkColorUnvisited;
+        }
+
+        &:focus {
+            outline: none;
+            color: $linkColorUnvisited;
+        }
+    }
+
+    .sidebar-content {
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        
+        transition: opacity 0.2s ease;
+        width: 100%;
+        
+        color: $titleColor;
+        margin-top: 60px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $backgroundColorSecondary;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $subTitleColor;
+            border-radius: 3px;
+        }
+    }
+
+    .sidebar-message-box {
+        padding: 20px 5% 20px 5%;
+        background-color: $backgroundColorSecondary;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        min-height: 120px;
+
+        textarea {
+            flex: 1;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            resize: none;
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: $backgroundColorPrimary;
+            color: $titleColor;
+            transition: border-color 0.2s ease;
+
+            &:focus {
+                outline: none;
+                border-color: $linkColorUnvisited;
+            }
+
+            &::placeholder {
+                color: $subTitleColorSecondary;
+            }
+        }
+
+        .send-button {
+            background-color: $backgroundColorPrimary;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: $titleColor;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            margin-top: 4px;
+
+            &:hover:not(:disabled) {
+                color: $linkColorUnvisited;
+                transform: scale(1.05);
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px rgba($linkColorUnvisited, 0.3);
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .floating-sidebar {
+        width: 50px;
+
+        &.expanded {
+            width: 250px;
+        }
+    }
+}

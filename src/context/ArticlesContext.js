@@ -8,6 +8,7 @@ export const ArticleProvider = ({children}) => {
     useEffect( () => {
           const getArticles = async() => {
               const response = await axios.get(`https://dev.to/api/articles?username=ayushkaushik&state=fresh`);
+
               setArticles(response.data);
           }
 
