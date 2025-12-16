@@ -20,13 +20,18 @@ const Aboutme = () => {
                             href={userContext.userInfo.html_url}
                             target='_blank'
                             rel='noreferrer noopener'
+                            aria-label="GitHub profile"
                         ><FontAwesomeIcon className={"project-icon"}
                             icon={faGithubSquare} /></a>
-                        <a href={"https://www.linkedin.com/in/ayushkaushik"}><FontAwesomeIcon
-                            className={"project-icon"}
-                            icon={faLinkedin} /></a>
-                        <a href={"https://dev.to/ayushkaushik"}><FontAwesomeIcon className={"project-icon"}
-                            icon={faDev} /></a>
+                        <a
+                            aria-label="LinkedIn profile"
+                            href={"https://www.linkedin.com/in/ayushkaushik"}><FontAwesomeIcon
+                                className={"project-icon"}
+                                icon={faLinkedin} /></a>
+                        <a
+                            aria-label="Dev.to profile"
+                            href={"https://dev.to/ayushkaushik"}><FontAwesomeIcon className={"project-icon"}
+                                icon={faDev} /></a>
                     </div>
                 </span>
                 <div className={"aboutme-img-container"}>
