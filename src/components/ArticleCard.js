@@ -21,6 +21,8 @@ const ArticleCard = ({ article }) => {
             <span className={"layout-card-links"}>
                 <a
                     href={article.url}
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     aria-label={`Read more about ${article.title}`}><FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}
                 </a>
             </span>
