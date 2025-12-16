@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { UserContext } from "../context/UserContext";
 import Emoji from "../components/Emoji";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -13,10 +13,14 @@ const Aboutme = () => {
                 className={"aboutme-container"}
             >
                 <span>
-                    <h1>{"Hi! I'm Ayush Kaushik"}<Emoji symbol={"👋"} label={"wave"} className={"about-me-wave-icon"}/></h1>
+                    <h1>{"Hi! I'm Ayush Kaushik"}<Emoji symbol={"👋"} label={"wave"} className={"about-me-wave-icon"} /></h1>
                     <h2>{"I'm a Software Engineer @ OpenText."}</h2>
                     <div>
-                        <a href={userContext.userInfo.html_url}><FontAwesomeIcon className={"project-icon"}
+                        <a
+                            href={userContext.userInfo.html_url}
+                            target='_blank'
+                            rel='noreferrer noopener'
+                        ><FontAwesomeIcon className={"project-icon"}
                             icon={faGithubSquare} /></a>
                         <a href={"https://www.linkedin.com/in/ayushkaushik"}><FontAwesomeIcon
                             className={"project-icon"}
