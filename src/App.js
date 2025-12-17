@@ -1,54 +1,16 @@
 import './App.scss';
-import { useEffect, useState, useCallback } from 'react';
-import Projects from "./pages/Projects";
-import Articles from "./pages/Articles";
-import Aboutme from "./pages/Aboutme";
-import Footer from "./pages/Footer";
-import Experience from "./pages/Experience";
-import Navbar from "./components/Navbar";
-import Skills from "./pages/Skills";
-import Contact from './pages/Contact';
-
-import FloatingSidebar from './components/FloatingSidebar';
-import SidebarToggle from './components/SidebarToggle';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import BlogHandy from './pages/BlogHandy';
 
 function App() {
-    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-
-    useEffect(() => {
-        document.title = "Ayush Kaushik";
-    }, []);
-
-    const handleSidebarOpen = useCallback(() => {
-        setIsSidebarVisible(true);
-    }, []);
-
     return (
-        <div>
-            <SidebarToggle onClick={handleSidebarOpen} />
-            <FloatingSidebar
-                isVisible={isSidebarVisible}
-                onClose={() => setIsSidebarVisible(false)}
-            />
-
-            <main>
-                <Aboutme />
-
-                <header>
-                    <Navbar />
-                </header>
-
-
-                <Skills />
-                <Experience />
-                <Projects />
-                <Articles />
-                <Contact />
-
-            </main>
-
-            <Footer />
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/articles" element={<BlogHandy />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

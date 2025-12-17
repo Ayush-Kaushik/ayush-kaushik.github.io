@@ -7,6 +7,7 @@ const Articles = () => {
 
     return (
         <div id="articles">
+
             <div className={"layout-page"}>
                 <h1>{"Blogs"}</h1>
                 {
