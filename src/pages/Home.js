@@ -12,12 +12,6 @@ const Home = () => {
     const location = useLocation();
 
     useEffect(() => {
-        document.title = "Ayush Kaushik";
-    }, []);
-
-
-
-    useEffect(() => {
         if (!location.hash) return;
 
         const targetId = location.hash.replace("#", "");

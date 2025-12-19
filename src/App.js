@@ -1,6 +1,6 @@
 import './App.scss';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -14,6 +14,10 @@ function App() {
 
     const handleSidebarOpen = useCallback(() => {
         setIsSidebarVisible(true);
+    }, []);
+
+    useEffect(() => {
+        document.title = "Ayush Kaushik";
     }, []);
 
     return (
