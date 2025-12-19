@@ -15,7 +15,10 @@ const Navbar = () => {
                     <Link to="/#projects">{"Projects"}</Link>
                 </li>
                 <li>
-                    <a href="/bloghandy">{"Blogs"}</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="/bloghandy">{"Blogs"}</a>
                 </li>
                 <li>
                     <a href={RESUME_LINK} download>{"Resume"}</a>

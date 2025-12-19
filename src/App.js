@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import SidebarToggle from './components/SidebarToggle';
 import FloatingSidebar from './components/FloatingSidebar';
-import BlogHandyIframe from './pages/BlogHandy';
 
 function App() {
 
@@ -32,7 +31,6 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/articles" element={<BlogHandyIframe />} />
             </Routes>
         </BrowserRouter>
     );
