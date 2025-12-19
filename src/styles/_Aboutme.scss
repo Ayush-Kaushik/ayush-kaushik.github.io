@@ -1,12 +1,12 @@
 @use "./layout/mixins";
 @use "./layout/variables";
 
-// Base styles for the container
 .aboutme-container {
   text-align: center;
   display: flex;
   padding: 0.5rem;
   justify-content: center;
+  padding-top: 100px;
 
   img {
     border-radius: 20px;

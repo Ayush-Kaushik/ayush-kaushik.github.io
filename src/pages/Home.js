@@ -1,46 +1,59 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
+
 import Projects from "./Projects";
 import Aboutme from "./Aboutme";
 import Footer from "./Footer";
 import Experience from "./Experience";
-import Navbar from "../components/Navbar";
 import Skills from "./Skills";
 import Contact from './Contact';
 
-import FloatingSidebar from '../components/FloatingSidebar';
-import SidebarToggle from '../components/SidebarToggle';
-
 const Home = () => {
-    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         document.title = "Ayush Kaushik";
     }, []);
 
-    const handleSidebarOpen = useCallback(() => {
-        setIsSidebarVisible(true);
-    }, []);
+
+
+    useEffect(() => {
+        if (!location.hash) return;
+
+        const targetId = location.hash.replace("#", "");
+        const el = document.getElementById(targetId);
+
+        if (el) {
+            el.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }, [location]);
 
     return (
         <div>
-            <SidebarToggle onClick={handleSidebarOpen} />
-            <FloatingSidebar
-                isVisible={isSidebarVisible}
-                onClose={() => setIsSidebarVisible(false)}
-            />
-
             <main>
-                <Aboutme />
+                <section id="aboutme">
+                    <Aboutme />
+                </section>
 
-                <header>
-                    <Navbar />
-                </header>
+                <section id="skills">
+                    <Skills />
+                </section>
 
+                <section id="experience">
+                    <Experience />
+                </section>
 
-                <Skills />
-                <Experience />
-                <Projects />
-                <Contact />
+                <section id="projects">
+                    <Projects />
+                </section>
+
+                <section id="projects">
+                    <Contact />
+                </section>
+
 
             </main>
 

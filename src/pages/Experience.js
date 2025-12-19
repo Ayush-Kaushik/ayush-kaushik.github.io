@@ -4,21 +4,20 @@ import ExperienceHackathonCard from "../components/ExperienceHackathonCard";
 
 const Experience = () => {
     return (
-        <div id="experience">
-            <div className={"layout-page"}>
-                <h1>{"Experience"}</h1>
-                <div>{EXPERIENCE.map((item, index) => {
-                    if (item.type === "hackathon") {
-                        return (
-                            <ExperienceHackathonCard key={index} experience={item.data} />
-                        )
-                    }
-                    
+
+        <div className={"layout-page experience-container"}>
+            <h1>{"Experience"}</h1>
+            <div>{EXPERIENCE.map((item, index) => {
+                if (item.type === "hackathon") {
                     return (
-                        <ExperienceCard key={index} experience={item.data} />
+                        <ExperienceHackathonCard key={index} experience={item.data} />
                     )
-                })}
-                </div>
+                }
+
+                return (
+                    <ExperienceCard key={index} experience={item.data} />
+                )
+            })}
             </div>
         </div>
     )

@@ -6,13 +6,13 @@ const Navbar = () => {
         <div className={"layout-navigation"}>
             <ul>
                 <li>
-                    <Link to={'/'}>{"Home"}</Link>
+                    <Link to={'/#aboutme'}>{"Home"}</Link>
                 </li>
                 <li>
-                    <a href="#experience">{"Experience"}</a>
+                    <Link to="/#experience">{"Experience"}</Link>
                 </li>
                 <li>
-                    <a href="#projects">{"Projects"}</a>
+                    <Link to="/#projects">{"Projects"}</Link>
                 </li>
                 <li>
                     <Link to="/articles">{"Blogs"}</Link>

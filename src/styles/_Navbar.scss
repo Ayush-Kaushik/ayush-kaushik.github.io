@@ -1,43 +1,24 @@
 @use "./layout/mixins";
 @use "./layout/variables";
 
-.navbar-container {
-  display: flex;
-  justify-content: flex-end;
-
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
-    margin-top: 40px;
-
-    li {
-      text-decoration: none;
-      margin: 5%;
-       a {
-         cursor: pointer;
-       }
-    }
-  }
-}
-
 .layout-navigation {
+  position: fixed;
+  width: 100%;
+  font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+
   background-color: variables.$footerColor;
 
-  // Base styles for the navigation list
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     list-style-type: none;
-    padding: 0; // Add padding reset for ul if needed
-    margin: 0;  // Remove margin if there is any unwanted spacing
+    padding: 0;
+    margin: 0; 
   }
 
-  // Styles for each list item
   li {
-    margin: 1rem 0; // Combine margin-top and margin-bottom
+    margin: 1rem 0;
   
     a {
       text-decoration: none;
@@ -50,7 +31,6 @@
       }
     }
 
-    // Responsive font-size adjustments
     @include mixins.sm {
       font-size: 1rem;
     }
