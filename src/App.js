@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import SidebarToggle from './components/SidebarToggle';
 import FloatingSidebar from './components/FloatingSidebar';
+import Articles from './pages/Articles';
+import Article from './components/Article';
 
 function App() {
 
@@ -35,6 +37,8 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/blogs" element={<Articles />} />
+                <Route path="/blog/:postId" element={<Article />} />
             </Routes>
         </BrowserRouter>
     );

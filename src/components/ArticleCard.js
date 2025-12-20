@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDev } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faBookReader } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const ArticleCard = ({ article }) => {
     return (
@@ -18,17 +19,9 @@ const ArticleCard = ({ article }) => {
             </div>
 
             <span className={"layout-card-links"}>
-                <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Read more about ${article.title}`}>
-                    <FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}
-                    <span className="sr-only"> {article.title}</span>
-                </a>
+                <Link to={`/blog/${article.postId}`} style={{ textDecoration: "none" }}><FontAwesomeIcon className={"project-icon"} icon={faDev} /> {"Read More"}
+                    <span className="sr-only"> {article.title}</span></Link>
             </span>
-
-
         </div>
     )
 };
