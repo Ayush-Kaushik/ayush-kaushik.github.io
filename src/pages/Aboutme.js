@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { UserContext } from "../context/UserContext";
-import Emoji from "../components/Emoji";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithubSquare, faLinkedin, faDev } from "@fortawesome/free-brands-svg-icons";
 
