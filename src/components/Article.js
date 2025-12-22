@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import ReadingProgressBar from "./ReadingProgressBar";
 
 const Article = () => {
 
@@ -17,9 +18,13 @@ const Article = () => {
     }, [postId]);
 
     return (
-        <div className="article-container">
+        <div>
+            <ReadingProgressBar />
+            <div className="article-container">
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>
+        </div>
+        
     );
 };
 
