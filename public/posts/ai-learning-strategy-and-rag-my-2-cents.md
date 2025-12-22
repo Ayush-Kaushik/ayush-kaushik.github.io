@@ -1,16 +1,18 @@
-# AI Learning Strategy and RAG (my 2 cents)
+# Exploring AI Through RAG: A Hands-On Learning Journey
 
 ## Initial Roadblocks when Learning about AI
 
-While I began learning about Artificial Intelligence and its applications, I realized that it heavily relied on statistics and mathematics knowledge. I initially followed bottom-up approach by learning the basics first and then built my way up to more complex concepts. But I kept getting stuck in the weeds since one concept leveraged another concept. I couldn't retain all the information and connect the dots. In the end, I just ended up reading a bunch of research papers and watched countless YouTube videos without really absorbing the concepts.
+While I began learning about Artificial Intelligence and its applications, I realized that it heavily relied on deep statistics and mathematical knowledge. I initially followed bottom-up approach by learning the basics first and then built my way up to more complex concepts. But I kept getting stuck in the weeds since one concept leveraged another. I couldn't retain all the information and connect the dots.
 
-So, I had to think differently. In the past, every-time I learned a new concept, I used to either document it as an article or build a small project to enforce my learning. But where do I even start with AI? 
+I needed a practical entrypoint to kick-start my learning journey about AI concepts. While looking for that 'in', I was also making some security upgrades to my portfolio website. Reviewing my content from a third person perspective made me wonder if a reader will be able to retain all the information presented on the website. That’s when I realized that I needed to offer another means of interaction with my website. This is what birthed the idea of a smart chat-bot that answers questions based on my own content.
 
-While figuring out this answer, I was also making some security upgrades to my portfolio website. I started reviewing the content from a third person perspective and wondered if someone will be able to read through all of my content presented in the website and retain all the information. That’s when I realized that I needed to provide another means of interaction with my website. Low and behold, that's when I thought of a smart chat-bot. Personally, I have used chat-bots in the past and always begged them to transfer me to a real human so I knew the least this bot could do was not be boring and provide coherent answers.
+## Exploring ways to build my ChatBot
 
-So, I looked at ChatGPT and wondered, it knows everything about everything. What if I built my own AyushGPT which will be trained exclusively on my content (my learning, projects and articles) and answer questions about me. Well, I think it is possible and I have seen people do it in the past so I started looking into models and how they are built, trained and fine-tuned. But again the barrier to entry was the process being costly and resource intensive. So I started looking at other means and this is when I came across RAG (Retrieval Augmented Generation).
+So, I looked at ChatGPT and wondered, it has been trained on oceans of data and can answer questions about any topic. What if I built my own version of ChatGPT trained exclusively on my content (projects and blogs) to answer questions about me? Well, it seemed doable so I started looking into models and how they are built, trained and fine-tuned. But the barrier to entry was the process being costly and resource-intensive. I explored more alternatives which led me to **RAG (Retrieval Augmented Generation)**.
 
-The name sounded pretty intimidating to me at first but then I used top-down approach. I started by treating the entire concept as a BlackBox and then peeled it layer by layer. I made sure to understand each stage so thoroughly that I could even to explain it to my dog (of course, he already knows way more about RAGs). I digress, but let me explain RAG in most non-technical way possible.
+The name sounded pretty intimidating to me at first but then I used top-down approach. I treated RAG like a **black box** and then peeled it layer by layer. I made sure to understand each layer so thoroughly that I could even explain it to my dog (of course, he already knows way more about RAGs). I digress, but here's a simple analogy to understand why RAG is needed.
+
+## The Genie Analogy
 
 Suppose your LLM is like a Genie which answers any questions you have because it has been trained on the knowledge of the entire world. But its power is also its biggest hurdle. If I go ahead and ask a genie, “What CI-CD tool is Ayush proficient at?”, then it will produce an answer but it may not be relevant to me. 
 
