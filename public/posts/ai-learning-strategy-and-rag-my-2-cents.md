@@ -18,9 +18,7 @@ Suppose your LLM is like a genie which answers any questions you have because it
 
 Here comes the technical definition:
 
-```
 RAG (Retrieval Augmentation Generation) is a framework that provides context to an LLM by querying a database of related information based on the user query. 
-```
 
 In simpler terms, when I query an LLM, it's not going in blind when answering my question. It receives relevant data from my dataset (called context) and produces a coherent answer. With this understanding, the rest of the article will show how I applied RAG to my own data and built a smart ChatBot. You will be able to interact with it on my website.
 
@@ -30,10 +28,10 @@ In simpler terms, when I query an LLM, it's not going in blind when answering my
 
 In case you didn't understand my hand-writing above (I know it is like hieroglyphics). Lets break this down into small sections:
 
-User Query: This is you, the user accessing my website, clicking on the Ask AI button and asking a question to Chat-Bot. Your question is the query. Once, you hit enter the journey begins.
-When the Chat-Bot receives the query, it also adds a prompt for the LLM - I won't give the exact prompt due to security concerns but it goes something like this "Suppose you know everything about Ayush, now answer this question".
-So now we have prompt and query, but like said before our Genie (LLM) doesn't know about Ayush. So we generate embedding out of the query and use special algorithms to find the closest vectors to prompt. So what we have now is prompt + query + contextual information.
-Now final step is passing prompt + query + contextual data to LLM and asking it to generate a coherent response that we can send back to user.
+- **User Query:** This is you, the user accessing my website, clicking on the Ask AI button and asking a question to Chat-Bot. Your question is the query. Once, you hit enter the journey begins.
+- When the Chat-Bot receives the query, it also adds a prompt for the LLM - I won't give the exact prompt due to security concerns but it goes something like this "Suppose you know everything about Ayush, now answer this question".
+- So now we have prompt and query, but like said before our Genie (LLM) doesn't know about Ayush. So we generate embedding out of the query and use special algorithms to find the closest vectors to prompt. So what we have now is prompt + query + contextual information.
+- Now final step is passing prompt + query + contextual data to LLM and asking it to generate a coherent response that we can send back to user.
 
 **How do I query an LLM?**
 

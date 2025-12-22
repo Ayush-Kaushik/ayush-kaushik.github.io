@@ -16,7 +16,11 @@ const Article = () => {
             .catch((err) => console.log(err));
     }, [postId]);
 
-    return <ReactMarkdown>{content}</ReactMarkdown>;
+    return (
+        <div className="article-container">
+            <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
+    );
 };
 
 export default Article;
