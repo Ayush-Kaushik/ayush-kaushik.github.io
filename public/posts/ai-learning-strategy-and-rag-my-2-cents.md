@@ -14,21 +14,19 @@ The name sounded pretty intimidating to me at first but then I used top-down app
 
 ## The Genie Analogy
 
-Suppose your LLM is like a Genie which answers any questions you have because it has been trained on the knowledge of the entire world. But its power is also its biggest hurdle. If I go ahead and ask a genie, “What CI-CD tool is Ayush proficient at?”, then it will produce an answer but it may not be relevant to me. 
-
-I am sure there must be thousands of of Ayush out there which the genie knows about. Maybe, the poor fellow was trained on some other Ayush’s information. And it’ll most likely give incorrect answer (or hallucinate). So how do I let Genie know about me? This is where I gave the fellow a potion called RAG.
+Suppose your LLM is like a genie which answers any questions you have because it has been trained on the knowledge of the entire world. But its power is also its biggest hurdle. If I go ahead and ask a genie, “What CI-CD tool is Ayush proficient at?”, then it will produce an answer but it may not be relevant to me. I am sure there must be thousands of Ayush out there that the genie knows about. It will most likely give an incorrect answer (also known as **hallucination**). So how do I let genie know about me? By giving him a potion called RAG.
 
 Here comes the technical definition:
 
-RAG (Retrieval Augmentation Generation) is a tool that provides context to an LLM by querying a database of related information based on prompt. 
+```
+RAG (Retrieval Augmentation Generation) is a framework that provides context to an LLM by querying a database of related information based on the user query. 
+```
 
-In simpler terms, when I query an LLM, its not going in blind when answering my question, it actually receives accompanying information related to me (called context) and then answers the question in a more relevant manner. 
-
-So, coming back to the smart ChatBot, In the remaining article, I will explain RAG concepts with my own data and show the entire pipeline. You should also be able to interact with it on my website.
+In simpler terms, when I query an LLM, it's not going in blind when answering my question. It receives relevant data from my dataset (called context) and produces a coherent answer. With this understanding, the rest of the article will show how I applied RAG to my own data and built a smart ChatBot. You will be able to interact with it on my website.
 
 ## Architectural Diagram
 
-Here is the overall diagram:
+![RAG Architecure](/images/rag-architecture-diagram.jpg)
 
 In case you didn't understand my hand-writing above (I know it is like hieroglyphics). Lets break this down into small sections:
 
