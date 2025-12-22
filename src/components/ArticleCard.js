@@ -5,10 +5,6 @@ import { Link } from "react-router-dom";
 const ArticleCard = ({ article }) => {
     return (
         <div className={"layout-card"}>
-            <div className={"layout-card-img"}>
-                <img src={article.social_image} alt={"article"} />
-            </div>
-
             <h1>{article.title}</h1>
             <p>{article.description}</p>
 

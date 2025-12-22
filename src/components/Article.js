@@ -21,10 +21,10 @@ const Article = () => {
         <div>
             <ReadingProgressBar />
             <div className="article-container">
-            <ReactMarkdown>{content}</ReactMarkdown>
+                <ReactMarkdown>{content}</ReactMarkdown>
+            </div>
         </div>
-        </div>
-        
+
     );
 };
 
