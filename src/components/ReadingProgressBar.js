@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { useState, useEffect } from "react";
 
 const ReadingProgressBar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const { isDarkMode } = useContext(ThemeContext);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
