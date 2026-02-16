@@ -1,5 +1,3 @@
-import './App.scss';
-
 import { useState, useCallback, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -34,12 +32,13 @@ function App() {
                 <Navbar />
             </header>
 
-
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/blogs" element={<Articles />} />
-                <Route path="/blog/:postId" element={<Article />} />
-            </Routes>
+            <main className="pt-20 sm:pt-24">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/blogs" element={<Articles />} />
+                    <Route path="/blog/:postId" element={<Article />} />
+                </Routes>
+            </main>
         </BrowserRouter>
     );
 }

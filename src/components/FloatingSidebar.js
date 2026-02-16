@@ -99,50 +99,94 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
 
   return (
     <>
-      <div className={`floating-sidebar-overlay ${isVisible ? 'visible' : ''}`} onClick={onClose} />
-      <div className={`floating-sidebar ${isVisible ? 'visible' : ''}`}>
-        <button 
-          className="sidebar-close"
-          onClick={onClose}
-          aria-label="Close sidebar"
-        >
-          <FontAwesomeIcon icon={faTimes} />
-        </button>
-        <div className="sidebar-content">
-          <div className="chat-messages">
-            {messages.map((msg, index) => (
-              <div key={index} className={`message ${msg.type}`}>
-                {msg.text}
-              </div>
-            ))}
-            {isLoading && (
-              <div className="typing-indicator">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-        </div>
-        <div className="sidebar-message-box">
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Type a message..."
-            rows="3"
-            aria-label="Message input"
-            disabled={isLoading}
-          />
-          <button 
-            onClick={handleSendMessage}
-            disabled={!message.trim() || isLoading}
-            aria-label="Send message"
-            className="send-button"
+      {/* Overlay */}
+      <div
+        className={`fixed inset-0 z-30 bg-black transition-opacity duration-300 ${
+          isVisible ? 'opacity-50 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={onClose}
+      />
+
+      {/* Sidebar */}
+      <div
+        className={`fixed left-0 top-0 h-screen z-40 w-full sm:w-96 bg-white shadow-2xl flex flex-col transition-transform duration-300 transform ${
+          isVisible ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* Header */}
+        <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-200 bg-gradient-to-r from-blue-600 to-blue-500">
+          <h2 className="text-lg sm:text-xl font-bold text-white">Ask AI</h2>
+          <button
+            onClick={onClose}
+            aria-label="Close sidebar"
+            className="p-2 hover:bg-blue-700 rounded-lg transition-colors duration-200"
           >
-            <FontAwesomeIcon icon={faPaperPlane} />
+            <FontAwesomeIcon icon={faTimes} className="text-white text-lg" />
           </button>
+        </div>
+
+        {/* Messages Container */}
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+          {messages.length === 0 ? (
+            <div className="flex items-center justify-center h-full text-center">
+              <p className="text-slate-500 text-sm sm:text-base">Start a conversation by typing a message below...</p>
+            </div>
+          ) : (
+            <>
+              {messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className={`flex ${
+                    msg.type === 'user-message' ? 'justify-end' : 'justify-start'
+                  }`}
+                >
+                  <div
+                    className={`max-w-xs px-4 py-2 rounded-lg text-sm sm:text-base ${
+                      msg.type === 'user-message'
+                        ? 'bg-blue-600 text-white rounded-br-none'
+                        : 'bg-slate-100 text-slate-900 rounded-bl-none'
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                </div>
+              ))}
+              {isLoading && (
+                <div className="flex justify-start">
+                  <div className="flex gap-2 px-4 py-3 bg-slate-100 rounded-lg rounded-bl-none">
+                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
+                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }} />
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </>
+          )}
+        </div>
+
+        {/* Input Area */}
+        <div className="p-4 sm:p-6 border-t border-slate-200 bg-slate-50">
+          <div className="flex gap-2">
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder="Type a message..."
+              rows="3"
+              aria-label="Message input"
+              disabled={isLoading}
+              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg text-sm sm:text-base text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:bg-slate-200 disabled:text-slate-500 resize-none transition-all duration-200"
+            />
+            <button
+              onClick={handleSendMessage}
+              disabled={!message.trim() || isLoading}
+              aria-label="Send message"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 disabled:bg-slate-300 text-white font-semibold rounded-lg transition-colors duration-200 disabled:cursor-not-allowed flex items-center justify-center"
+            >
+              <FontAwesomeIcon icon={faPaperPlane} className="text-lg" />
+            </button>
+          </div>
         </div>
       </div>
     </>
