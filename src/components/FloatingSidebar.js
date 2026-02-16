@@ -109,7 +109,7 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed left-0 top-0 h-screen z-40 w-full sm:w-96 bg-white shadow-2xl flex flex-col transition-transform duration-300 transform ${
+        className={`fixed left-0 top-0 h-screen z-[60] w-full sm:w-96 bg-white shadow-2xl flex flex-col transition-transform duration-300 transform ${
           isVisible ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -119,9 +119,10 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
           <button
             onClick={onClose}
             aria-label="Close sidebar"
-            className="p-2 hover:bg-blue-700 rounded-lg transition-colors duration-200"
+            className="ml-auto p-2 sm:p-3 hover:bg-blue-700 active:bg-blue-800 rounded-lg transition-colors duration-200 flex items-center justify-center"
+            title="Close chat (Esc)"
           >
-            <FontAwesomeIcon icon={faTimes} className="text-white text-lg" />
+            <FontAwesomeIcon icon={faTimes} className="text-white text-xl sm:text-2xl" />
           </button>
         </div>
 

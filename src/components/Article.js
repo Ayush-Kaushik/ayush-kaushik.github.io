@@ -25,9 +25,9 @@ const Article = () => {
                     <div className="prose prose-sm sm:prose-base lg:prose-lg prose-slate max-w-none">
                         <ReactMarkdown
                             components={{
-                                h1: ({ node, ...props }) => <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-slate-900" {...props} />,
-                                h2: ({ node, ...props }) => <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-slate-900" {...props} />,
-                                h3: ({ node, ...props }) => <h3 className="text-2xl sm:text-3xl font-bold mb-3 mt-6 text-slate-900" {...props} />,
+                                h1: ({ node, children, ...props }) => <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-slate-900" {...props}>{children}</h1>,
+                                h2: ({ node, children, ...props }) => <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-8 text-slate-900" {...props}>{children}</h2>,
+                                h3: ({ node, children, ...props }) => <h3 className="text-2xl sm:text-3xl font-bold mb-3 mt-6 text-slate-900" {...props}>{children}</h3>,
                                 p: ({ node, ...props }) => <p className="text-base sm:text-lg text-slate-700 mb-4 leading-relaxed" {...props} />,
                                 ul: ({ node, ...props }) => <ul className="list-disc list-inside text-base sm:text-lg text-slate-700 mb-6 space-y-2" {...props} />,
                                 ol: ({ node, ...props }) => <ol className="list-decimal list-inside text-base sm:text-lg text-slate-700 mb-6 space-y-2" {...props} />,
@@ -39,8 +39,8 @@ const Article = () => {
                                     ) : (
                                         <code className="block bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto font-mono text-sm mb-6 my-4" {...props} />
                                     ),
-                                a: ({ node, ...props }) => <a className="text-blue-600 hover:text-blue-700 hover:underline transition-colors duration-200" {...props} />,
-                                img: ({ node, ...props }) => <img className="max-w-full h-auto rounded-lg my-6 shadow-md" {...props} />,
+                                a: ({ node, children, ...props }) => <a className="text-blue-600 hover:text-blue-700 hover:underline transition-colors duration-200" {...props}>{children}</a>,
+                                img: ({ node, alt, ...props }) => <img alt={alt || ""} className="max-w-full h-auto rounded-lg my-6 shadow-md" {...props} />,
                                 hr: ({ node, ...props }) => <hr className="my-8 border-slate-300" {...props} />,
                                 table: ({ node, ...props }) => <div className="overflow-x-auto my-6"><table className="border-collapse border border-slate-300 w-full" {...props} /></div>,
                                 th: ({ node, ...props }) => <th className="border border-slate-300 bg-slate-100 px-4 py-2 text-left font-semibold text-slate-900" {...props} />,
