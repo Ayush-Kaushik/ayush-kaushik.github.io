@@ -1,102 +1,34 @@
 @use "./layout/mixins";
-@use "./layout/variables";
+@use "./layout/variables" as v;
 
-.aboutme-container {
-  text-align: center;
+.hero {
   display: flex;
-  padding: 0.5rem;
+  align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  img {
-    border-radius: 20px;
-    width: 80%;
-  }
-
-  a {
-    color: variables.$iconColor;
-
-    &:hover {
-      color: variables.$footerColor;
-    }
-
-    &:visited,
-    &:focus {
-      color: variables.$iconColor;
-    }
-  }
-
-  .aboutme-img-container {
-    width: 40%; // Default style
-    align-items: center;
-  }
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: v.$lh-tight;
 
   h1,
   h2 {
-    font-size: 1.5rem; // Base size
+    margin: 0;
   }
-}
 
-// Media Queries - Handle Responsiveness
-@include mixins.sm {
-  .aboutme-container {
-    .aboutme-img-container {
-      display: none; // Hide image container on small screens
-    }
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    .project-icon {
-      padding: 2%;
-      font-size: 2rem;
-    }
+  h1 {
+    color: v.$text-title;
   }
-}
 
-@include mixins.md {
-  .aboutme-container {
-    .aboutme-img-container {
-      display: block; // Show image container on medium screens
-    }
-
-    h1 {
-      font-size: 40px;
-    }
-
-    h2 {
-      font-size: 25px;
-    }
-
-    .project-icon {
-      padding: 2%;
-      font-size: 3rem;
-    }
+  h2 {
+    color: v.$text-subtitle;
   }
-}
 
-@include mixins.lg {
-  .aboutme-container {
-    h1 {
-      font-size: 60px;
-    }
-
-    h2 {
-      font-size: 25px;
-    }
-
-    button {
-      font-size: variables.$h2_sm;
-    }
-
-    .project-icon {
-      padding: 2%;
-      font-size: 3rem;
-    }
+  .hero__company {
+    color: v.$color-brand-600;
   }
 }
