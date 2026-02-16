@@ -31,13 +31,8 @@ export const EXPERIENCE = [
             "workTitle": "DevOps Developer",
             "techstack": [],
             "description": [
-                "Introduced to YAML format for the first time when building deployment files",
-                "Learned and excelled Docker as a single node and Docker swarm",
-                "Understood different concepts such as containers, services, stacks, docker commands, network types and deployment files",
-                "Learned the concepts related to RabbitMQ and messaging queues in general",
-                "Learned how to build pipeline as workspaces, found some drawbacks in its use cases and switched to pipeline as code",
-                "Even pipeline as code per repository was not maintainable so learned how to use shared library and started setting up the pipeline infrastructure",
-                "Helped to bring drastic reduction in deployment times since everything that was done by shell scripting was handled by Jenkins pipeline"
+                "Built a **NodeJs** automation service to migrate **two years** of employee time tracking data between legacy and new systems, integrating both APIs and implementing tests to ensure data integrity; optimized API calls via caching, reducing redundant requests, lowering system load, and improving migration efficiency.",
+                "Designed and implemented automated CI/CD pipelines using **Jenkins** and a shared library architecture, standardizing repeatable deployment steps; reduced manual effort and errors, cutting deployment time from a slow, multi-hour process to under **15 minutes** and significantly improving team productivity and release velocity."
             ],
             "responsibilities": [
 

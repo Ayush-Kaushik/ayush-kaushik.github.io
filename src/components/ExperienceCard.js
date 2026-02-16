@@ -1,3 +1,5 @@
+import ReactMarkdown from 'react-markdown';
+
 const ExperienceCard = ({ experience }) => {
     return (
         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 md:p-8 border border-slate-200 dark:border-slate-700">
@@ -24,7 +26,13 @@ const ExperienceCard = ({ experience }) => {
                         <li key={index} className="flex items-start">
                             <span className="inline-block w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                             <span className="text-sm sm:text-base leading-relaxed">
-                                {item}
+                                <ReactMarkdown components={{
+                                    p: ({ node, ...props }) => <span {...props} />,
+                                    strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
+                                    em: ({ node, ...props }) => <em className="italic" {...props} />,
+                                }}>
+                                    {item}
+                                </ReactMarkdown>
                             </span>
                         </li>
                     ))}

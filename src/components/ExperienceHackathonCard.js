@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import ReactMarkdown from 'react-markdown';
 
 const ExperienceHackathonCard = ({ experience }) => {
     return (
@@ -23,14 +24,26 @@ const ExperienceHackathonCard = ({ experience }) => {
             {/* Challenge Section */}
             <div className="mb-6">
                 <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                    {experience.challenge}
+                    <ReactMarkdown components={{
+                        p: ({ node, ...props }) => <span {...props} />,
+                        strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
+                        em: ({ node, ...props }) => <em className="italic" {...props} />,
+                    }}>
+                        {experience.challenge}
+                    </ReactMarkdown>
                 </p>
             </div>
 
             {/* Description Section */}
             <div className="mb-8">
                 <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                    {experience.description}
+                    <ReactMarkdown components={{
+                        p: ({ node, ...props }) => <span {...props} />,
+                        strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
+                        em: ({ node, ...props }) => <em className="italic" {...props} />,
+                    }}>
+                        {experience.description}
+                    </ReactMarkdown>
                 </p>
             </div>
 
@@ -45,7 +58,13 @@ const ExperienceHackathonCard = ({ experience }) => {
                             <li key={index} className="flex items-start">
                                 <span className="inline-block w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                                 <span className="text-sm sm:text-base leading-relaxed">
-                                    {item}
+                                    <ReactMarkdown components={{
+                                        p: ({ node, ...props }) => <span {...props} />,
+                                        strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
+                                        em: ({ node, ...props }) => <em className="italic" {...props} />,
+                                    }}>
+                                        {item}
+                                    </ReactMarkdown>
                                 </span>
                             </li>
                         ))}
@@ -64,7 +83,13 @@ const ExperienceHackathonCard = ({ experience }) => {
                             <li key={index} className="flex items-start">
                                 <span className="inline-block w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                                 <span className="text-sm sm:text-base leading-relaxed">
-                                    {item}
+                                    <ReactMarkdown components={{
+                                        p: ({ node, ...props }) => <span {...props} />,
+                                        strong: ({ node, ...props }) => <strong className="font-bold" {...props} />,
+                                        em: ({ node, ...props }) => <em className="italic" {...props} />,
+                                    }}>
+                                        {item}
+                                    </ReactMarkdown>
                                 </span>
                             </li>
                         ))}
