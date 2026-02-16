@@ -3,6 +3,14 @@ import axios from "axios";
 import { projectList } from "../constants/Project";
 
 export const ProjectsContext = createContext();
+
+const formatProjectName = (name) => {
+    return name
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
+};
+
 export const ProjectsProvider = ({ children }) => {
     const [projects, setProjects] = useState([]);
 
@@ -14,6 +22,7 @@ export const ProjectsProvider = ({ children }) => {
                 if (projectList.includes(item.id)) {
                     let date = new Date(item.updated_at);
                     item['updated_at'] = "🗓️ Last Updated: " + date.toDateString();
+                    item['name'] = formatProjectName(item.name);
                     return item;
                 }
 

@@ -109,17 +109,17 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed left-0 top-0 h-screen z-[60] w-full sm:w-96 bg-white shadow-2xl flex flex-col transition-transform duration-300 transform ${
+        className={`fixed left-0 top-0 h-screen z-[60] w-full sm:w-96 bg-white dark:bg-slate-800 shadow-2xl flex flex-col transition-transform duration-300 transform ${
           isVisible ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         {/* Header */}
-        <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-200 bg-gradient-to-r from-blue-600 to-blue-500">
-          <h2 className="text-lg sm:text-xl font-bold text-white">Ask AI</h2>
+        <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-200 dark:border-slate-700 bg-gradient-to-r from-blue-600 to-blue-500 dark:from-blue-700 dark:to-blue-600">
+          <h2 className="text-lg sm:text-xl font-bold text-white dark:text-white">Ask AI</h2>
           <button
             onClick={onClose}
             aria-label="Close sidebar"
-            className="ml-auto p-2 sm:p-3 hover:bg-blue-700 active:bg-blue-800 rounded-lg transition-colors duration-200 flex items-center justify-center"
+            className="ml-auto p-2 sm:p-3 hover:bg-blue-700 dark:hover:bg-blue-800 active:bg-blue-800 dark:active:bg-blue-900 rounded-lg transition-colors duration-200 flex items-center justify-center"
             title="Close chat (Esc)"
           >
             <FontAwesomeIcon icon={faTimes} className="text-white text-xl sm:text-2xl" />
@@ -127,10 +127,10 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
         </div>
 
         {/* Messages Container */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-white dark:bg-slate-800">
           {messages.length === 0 ? (
             <div className="flex items-center justify-center h-full text-center">
-              <p className="text-slate-500 text-sm sm:text-base">Start a conversation by typing a message below...</p>
+              <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base">Start a conversation by typing a message below...</p>
             </div>
           ) : (
             <>
@@ -144,8 +144,8 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
                   <div
                     className={`max-w-xs px-4 py-2 rounded-lg text-sm sm:text-base ${
                       msg.type === 'user-message'
-                        ? 'bg-blue-600 text-white rounded-br-none'
-                        : 'bg-slate-100 text-slate-900 rounded-bl-none'
+                        ? 'bg-blue-600 dark:bg-blue-500 text-white rounded-br-none'
+                        : 'bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100 rounded-bl-none'
                     }`}
                   >
                     {msg.text}
@@ -154,10 +154,10 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="flex gap-2 px-4 py-3 bg-slate-100 rounded-lg rounded-bl-none">
-                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
-                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }} />
+                  <div className="flex gap-2 px-4 py-3 bg-slate-100 dark:bg-slate-700 rounded-lg rounded-bl-none">
+                    <div className="w-2 h-2 bg-slate-400 dark:bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
+                    <div className="w-2 h-2 bg-slate-400 dark:bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                    <div className="w-2 h-2 bg-slate-400 dark:bg-slate-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }} />
                   </div>
                 </div>
               )}
@@ -167,7 +167,7 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
         </div>
 
         {/* Input Area */}
-        <div className="p-4 sm:p-6 border-t border-slate-200 bg-slate-50">
+        <div className="p-4 sm:p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700">
           <div className="flex gap-2">
             <textarea
               value={message}
@@ -177,13 +177,13 @@ const FloatingSidebar = ({ isVisible, onClose }) => {
               rows="3"
               aria-label="Message input"
               disabled={isLoading}
-              className="flex-1 px-4 py-2 border border-slate-300 rounded-lg text-sm sm:text-base text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:bg-slate-200 disabled:text-slate-500 resize-none transition-all duration-200"
+              className="flex-1 px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-sm sm:text-base text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 bg-white dark:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 focus:border-transparent disabled:bg-slate-200 dark:disabled:bg-slate-700 disabled:text-slate-500 dark:disabled:text-slate-400 resize-none transition-all duration-200"
             />
             <button
               onClick={handleSendMessage}
               disabled={!message.trim() || isLoading}
               aria-label="Send message"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 disabled:bg-slate-300 text-white font-semibold rounded-lg transition-colors duration-200 disabled:cursor-not-allowed flex items-center justify-center"
+              className="px-4 py-2 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 active:bg-blue-800 dark:active:bg-blue-700 disabled:bg-slate-300 dark:disabled:bg-slate-600 text-white font-semibold rounded-lg transition-colors duration-200 disabled:cursor-not-allowed flex items-center justify-center"
             >
               <FontAwesomeIcon icon={faPaperPlane} className="text-lg" />
             </button>

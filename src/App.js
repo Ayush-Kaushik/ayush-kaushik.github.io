@@ -7,6 +7,7 @@ import SidebarToggle from './components/SidebarToggle';
 import FloatingSidebar from './components/FloatingSidebar';
 import Articles from './pages/Articles';
 import Article from './components/Article';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
 
@@ -21,25 +22,27 @@ function App() {
     }, []);
 
     return (
-        <BrowserRouter>
-            <SidebarToggle onClick={handleSidebarOpen} />
-            <FloatingSidebar
-                isVisible={isSidebarVisible}
-                onClose={() => setIsSidebarVisible(false)}
-            />
+        <ThemeProvider>
+            <BrowserRouter>
+                <SidebarToggle onClick={handleSidebarOpen} />
+                <FloatingSidebar
+                    isVisible={isSidebarVisible}
+                    onClose={() => setIsSidebarVisible(false)}
+                />
 
-            <header>
-                <Navbar />
-            </header>
+                <header>
+                    <Navbar />
+                </header>
 
-            <main className="pt-20 sm:pt-24">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/blogs" element={<Articles />} />
-                    <Route path="/blog/:postId" element={<Article />} />
-                </Routes>
-            </main>
-        </BrowserRouter>
+                <main className="pt-20 sm:pt-24">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/blogs" element={<Articles />} />
+                        <Route path="/blog/:postId" element={<Article />} />
+                    </Routes>
+                </main>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
 

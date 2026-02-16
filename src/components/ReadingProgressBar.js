@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 const ReadingProgressBar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -16,11 +19,11 @@ const ReadingProgressBar = () => {
   }, []);
 
   return (
-    <div className="reading-progress-container">
+    <div className="h-1 bg-slate-200 dark:bg-slate-700 fixed top-0 left-0 z-50 transition-colors duration-300">
       <div
-        className="reading-progress-bar"
+        className="h-full bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 transition-all duration-300"
         style={{ width: `${scrollProgress}%` }}
-      ></div>
+      />
     </div>
   );
 };

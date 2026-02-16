@@ -6,9 +6,9 @@ const Projects = () => {
     const projectContext = useContext(ProjectsContext);
 
     return (
-        <section id="projects" className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+        <section id="projects" className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 sm:mb-16 text-slate-900">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 sm:mb-16 text-slate-900 dark:text-white">
                     Projects
                 </h1>
                 
